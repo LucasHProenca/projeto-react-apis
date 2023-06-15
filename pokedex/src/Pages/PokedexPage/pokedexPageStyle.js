@@ -22,3 +22,8 @@ font-size: 4.8rem;
 line-height: 7.2rem;
 color: #FFFFFF;
 `
+export const ContainerPokemon = styled.section`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap
+`

@@ -12,48 +12,48 @@ import ground from "../assets/pokemon-types/ground.png";
 import ice from "../assets/pokemon-types/ice.png";
 import normal from "../assets/pokemon-types/normal.png";
 import poison from "../assets/pokemon-types/poison.png";
-import psychic from "../assets/pokemon-types/psychic.png";
+import psychic from "../assets/pokemon-types/pshychic.png";
 import rock from "../assets/pokemon-types/rock.png";
 import steel from "../assets/pokemon-types/steel.png";
 import water from "../assets/pokemon-types/water.png";
 
 export const getTypes = (type) => {
   switch (type) {
-    case "Bug":
+    case "bug":
       return bug;
-    case "Dark":
+    case "dark":
       return dark;
-    case "Dragon":
+    case "dragon":
       return dragon;
-    case "Electric":
+    case "electric":
       return electric;
-    case "Fairy":
+    case "fairy":
       return fairy;
-    case "Fighting":
+    case "fighting":
       return fighting;
-    case "Fire":
+    case "fire":
       return fire;
-    case "Flying":
+    case "flying":
       return flying;
-    case "Ghost":
+    case "ghost":
       return ghost;
-    case "Grass":
+    case "grass":
       return grass;
-    case "Ground":
+    case "ground":
       return ground;
-    case "Ice":
+    case "ice":
       return ice;
-    case "Normal":
+    case "normal":
       return normal;
-    case "Poison":
+    case "poison":
       return poison;
-    case "Psychic":
+    case "psychic":
       return psychic;
-    case "Rock":
+    case "rock":
       return rock;
-    case "Steel":
+    case "steel":
       return steel;
-    case "Water":
+    case "water":
       return water;
     default:
       return water;

@@ -6,46 +6,71 @@ import { HeaderContainer, Arrow } from "./headerStyle";
 
 
 
-const Header = () => {
+const Header = ({ pokedex, adicionaPokemon, removePokemon, pokemonList }) => {
     const navigate = useNavigate();
-
     let parametros = useLocation()
-console.log(parametros.pathname)
-    const renderizaTela = () => {
-        switch (parametros.pathname) {
-            case "/":
-                return <HeaderContainer>
-                    <img src={Logo} alt="logo" />
-                    <button onClick={() => {
-                        goToPokedex(navigate)
-                        }}>
-                        Pokedex
-                    </button>
-                </HeaderContainer>
-                case "/pokedex/":
-                    return<HeaderContainer>
-                    <div>
-                        <Arrow>‹</Arrow>
-                        <span onClick={() => {
-                             goToPokemonList(navigate)
-                        }}>Todos os Pokemons</span>
-                    </div>
-                    <img src={Logo} alt="logo" />
-                </HeaderContainer>
-                case "/pokemon-detail/bulbasaur":
-                    return<HeaderContainer>
-                    <div>
-                        <Arrow>‹</Arrow>
-                        <span onClick={() => {
-                             goToPokemonList(navigate)
-                        }}>Todos os Pokemons</span>
-                    </div>
-                    <img src={Logo} alt="logo" />
-                    <button>
-                        Excluir da Pokedex
-                    </button>
-                </HeaderContainer>
+    
+    const nome = parametros.pathname.split("/")[2]
 
+    const verificaPokemon = pokedex.find((pokemon) =>
+        pokemon.data.name === nome
+    )
+
+    const verificaLista = pokemonList.find((pokemon) =>
+    pokemon.data.name === nome
+    )
+
+    const result = () => {
+        
+        if (verificaPokemon) {
+            return<button onClick={() => {
+                removePokemon(verificaPokemon)
+                goToPokedex(navigate)
+                }}>
+                Excluir da Pokedex
+            </button>
+        } else if(verificaLista) {
+            return<button onClick={() => {
+                adicionaPokemon(verificaLista)
+                goToPokedex(navigate)
+                }}>
+                Adicionar na Pokedex
+            </button>
+        }
+    }
+
+    console.log(parametros.pathname)
+    const renderizaTela = () => {
+        if (parametros.pathname === "/") {
+            return <HeaderContainer>
+                <img src={Logo} alt="logo" />
+                <button onClick={() => {
+                    goToPokedex(navigate)
+                }}>
+                    Pokedex
+                </button>
+            </HeaderContainer>
+        } else if (parametros.pathname === "/pokedex/") {
+            return <HeaderContainer>
+                <div>
+                    <Arrow>‹</Arrow>
+                    <span onClick={() => {
+                        goToPokemonList(navigate)
+                    }}>Todos os Pokemons</span>
+                </div>
+                <img src={Logo} alt="logo" />
+            </HeaderContainer>
+        } else if (parametros.pathname.includes("/pokemon-detail/")) {
+                return <HeaderContainer>
+                    <div>
+                        <Arrow>‹</Arrow>
+                        <span onClick={() => {
+                            goToPokemonList(navigate)
+                        }}>Todos os Pokemons</span>
+                    </div>
+                    <img src={Logo} alt="logo" />
+                    {result()}
+                </HeaderContainer>
         }
     }
     return (

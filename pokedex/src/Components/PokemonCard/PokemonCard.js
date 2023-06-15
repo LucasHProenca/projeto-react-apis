@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Progress } from "@chakra-ui/react"
 import {
     PokemonCardContainer,
     PokemonId,
@@ -18,95 +19,132 @@ import {
     QuadroGrandeBranco,
     BaseStats,
     QuadroADireita,
-    UltimoQuadro
+    UltimoQuadro,
+    StatusDoPokemon,
+    NomeDoStatus,
+    ValorNumericoStatus,
+    BarrasDePoder,
+    PokemonNosDetalhes
 } from "./pokemonCardStyle"
-import Grass from "../../Midia/grass.png"
-import Poison from "../../Midia/poison.png"
-import Bulbasaur from "../../Midia/bulbasaur.png"
 import PokebalImage from "../../Midia/pokeball.png"
 import { goToDetails } from "../../Router/Coordinator"
 import { useLocation, useNavigate } from "react-router-dom"
+import {getColors} from "../../utils/ReturnCardColor"
+import {getTypes} from "../../utils/ReturnPokemonType"
 
-const PokemonCard = () => {
+const PokemonCard = ({id, name, type, image, adicionaPokemon, removePokemon, poke }) => {
 
     const navigate = useNavigate()
     let parametros = useLocation()
 
     const renderizaTela = () => {
-        switch (parametros.pathname) {
-            case "/":
-                return <PokemonCardContainer>
+        if(parametros.pathname === "/" ) {
+                return <PokemonCardContainer color = {getColors(poke.data.types[0].type.name)}>
                     <div>
-                        <PokemonId>#01</PokemonId>
-                        <PokemonName>Bulbasaur</PokemonName>
+                        <PokemonId>#{id.toString().length === 1? `0${id}` : `${id}`}</PokemonId>
+                        <PokemonName>{name[0].toUpperCase() + name.substring(1)}</PokemonName>
                         <TypesContainer>
-                            <PokemonType src={Grass} />
-                            <PokemonType src={Poison} />
+                            {type.map((type) => {
+                                return <PokemonType
+                                key={type.id}
+                                src={getTypes(type.type.name)}
+                                />
+                            })}
                         </TypesContainer>
                         <PokemonDetail onClick={() => {
-                            goToDetails(navigate)
+                            goToDetails(navigate, name)
                         }}>Detalhes</PokemonDetail>
                     </div>
                     <div>
-                        <Pokemon src={Bulbasaur} />
-                        <Button>Capturar!</Button>
+                        <Pokemon src={image} />
+                        <Button onClick = {() => adicionaPokemon(poke)}>Capturar!</Button>
                     
                     <Pokeball src={PokebalImage} alt="pokeball" />
                     </div>
                 </PokemonCardContainer>
-            case "/pokedex/":
-                return <PokemonCardContainer>
+        }else if(parametros.pathname === "/pokedex/" ) {
+                return <PokemonCardContainer color = {getColors(poke.data.types[0].type.name)}>
                     <div>
-                        <PokemonId>#01</PokemonId>
-                        <PokemonName>Bulbasaur</PokemonName>
+                        <PokemonId>#{id.toString().length === 1? `0${id}` : `${id}`}</PokemonId>
+                        <PokemonName>{name[0].toUpperCase() + name.substring(1)}</PokemonName>
                         <TypesContainer>
-                            <PokemonType src={Grass} />
-                            <PokemonType src={Poison} />
+                        {type.map((type) => {
+                                return <PokemonType
+                                key={type.id}
+                                src={getTypes(type.type.name)}
+                                />
+                            })}
                         </TypesContainer>
                         <PokemonDetail onClick={() => {
-                            goToDetails(navigate)
+                            goToDetails(navigate, name)
                         }}>Detalhes</PokemonDetail>
                     </div>
                     <div>
-                        <Pokemon src={Bulbasaur} />
-                        <Button>Capturar!</Button>
+                        <Pokemon src={image} />
+                        <Button onClick={() => removePokemon(poke)}>Excluir!</Button>
                     
                     <Pokeball src={PokebalImage} alt="pokeball" />
                     </div>
                 </PokemonCardContainer>
-            case `/pokemon-detail/`:
-                return <PokemonDetalhesCard>
+        }else if (parametros.pathname.includes("/pokemon-detail/")) {
+                return <PokemonDetalhesCard color = {getColors(poke.data.types[0].type.name)} >
                     <QuadroGrandeBranco>
                     <QuadrosBrancos>
-                        <QuadrosAEsquerda>
-                            Este é o primeiro quadro
+                        <QuadrosAEsquerda >
+                            <img src={poke.data.sprites.front_default}/>
                         </QuadrosAEsquerda>
                         <QuadrosAEsquerda>
-                            Este é o quadro de baixo
+                        <img src={poke.data.sprites.back_default}/>    
                         </QuadrosAEsquerda>
                     </QuadrosBrancos>
                     <BaseStats>
-                    Este é o Base Stats
+                    <h2>Base Stats</h2>
+                    <StatusDoPokemon>
+                        {poke.data.stats.map((pokemon) => {
+                            console.log(pokemon.base_stat)
+                            return<div>
+                                <NomeDoStatus key = {pokemon.id}>
+                                    {pokemon.stat.name}
+                                </NomeDoStatus>
+                                <ValorNumericoStatus>
+                                    {pokemon.base_stat}
+                                </ValorNumericoStatus>
+                                <BarrasDePoder>
+                                    <Progress max={150} value={pokemon.base_stat }></Progress>
+                                </BarrasDePoder>
+                            </div>
+                        })}
+                    </StatusDoPokemon>
                     </BaseStats>
                     <UltimoQuadro>
                     <InformacoesPokemon>
-                        <PokemonId>#01</PokemonId>
-                        <PokemonName>Bulbasaur</PokemonName>
+                        <PokemonId>#{id.toString().length === 1? `0${id}` : `${id}`}</PokemonId>
+                        <PokemonName>{name[0].toUpperCase() + name.substring(1)}</PokemonName>
                         <ContainerDeTipos>
-                            <PokemonType src={Grass} />
-                            <PokemonType src={Poison} />
+                        {type.map((type) => {
+                                return <PokemonType
+                                key={type.id}
+                                src={getTypes(type.type.name)}
+                                />
+                            })}
                         </ContainerDeTipos>
                     </InformacoesPokemon>
-                    <QuadroADireita>Moves</QuadroADireita>
+                    <QuadroADireita>
+                    <h2>Moves</h2>
+                    {poke.data.moves.map((pokemon, id) => {
+                        return id < 10 && <p key={id}>{pokemon.move.name}</p>
+                    })}
+                    </QuadroADireita>
                     </UltimoQuadro>
                     </QuadroGrandeBranco>
-                        <Pokemon src={Bulbasaur} />
+                        <Pokemon src={image} />
                     <PokeballDetails src={PokebalImage} alt="pokeball" />
                 </PokemonDetalhesCard>
         }
+        
     }
     return (
         renderizaTela()
     )
-}
+    }
 export default PokemonCard
