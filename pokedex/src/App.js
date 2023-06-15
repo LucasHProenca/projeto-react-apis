@@ -1,6 +1,8 @@
 import Router from './Router/Router';
 import { createGlobalStyle } from 'styled-components';
 import { ChakraProvider } from '@chakra-ui/react';
+import { GlobalState } from './GlobalState/GlobalState';
+import { ModalPokemons } from './Components/Modal/ModalPokemons';
 
 const GlobalStyle = createGlobalStyle`
 html{
@@ -30,10 +32,13 @@ code {
 function App() {
   return (
     <>
+    <GlobalState>
     <ChakraProvider>
     <GlobalStyle />
+    <ModalPokemons/>
     <Router/>
     </ChakraProvider>
+    </GlobalState>
     </>
   )
 }

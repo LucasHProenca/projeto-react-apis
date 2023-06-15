@@ -1,10 +1,15 @@
-import React from "react"
+import React, { useContext } from "react"
 import PokemonCard from "../../Components/PokemonCard/PokemonCard"
+import { globalContext } from "../../GlobalState/GlobalStateContext"
 import { PokedexPageEstilizacao, MeusPokemons, ContainerPokemon } from "./pokedexPageStyle"
 
 
 
-const PokedexPage = ({ removePokemon, pokedex, setPokedex }) => {
+const PokedexPage = () => {
+
+  const context = useContext(globalContext)
+  const {pokedex, removePokemon} = context
+
   return (
     <PokedexPageEstilizacao>
       <MeusPokemons>Meus Pokemons</MeusPokemons>

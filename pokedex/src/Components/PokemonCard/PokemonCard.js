@@ -57,7 +57,9 @@ const PokemonCard = ({id, name, type, image, adicionaPokemon, removePokemon, pok
                     </div>
                     <div>
                         <Pokemon src={image} />
-                        <Button onClick = {() => adicionaPokemon(poke)}>Capturar!</Button>
+                        <Button onClick = {() => {
+                            adicionaPokemon(poke)
+                            }}>Capturar!</Button>
                     
                     <Pokeball src={PokebalImage} alt="pokeball" />
                     </div>
@@ -104,13 +106,13 @@ const PokemonCard = ({id, name, type, image, adicionaPokemon, removePokemon, pok
                             console.log(pokemon.base_stat)
                             return<div>
                                 <NomeDoStatus key = {pokemon.id}>
-                                    {pokemon.stat.name}
+                                    {pokemon.stat.name[0].toUpperCase() + pokemon.stat.name.substring(1)}
                                 </NomeDoStatus>
                                 <ValorNumericoStatus>
                                     {pokemon.base_stat}
                                 </ValorNumericoStatus>
                                 <BarrasDePoder>
-                                    <Progress max={150} value={pokemon.base_stat }></Progress>
+                                    <Progress size={"lg"} max={150} value={pokemon.base_stat }></Progress>
                                 </BarrasDePoder>
                             </div>
                         })}
@@ -131,9 +133,11 @@ const PokemonCard = ({id, name, type, image, adicionaPokemon, removePokemon, pok
                     </InformacoesPokemon>
                     <QuadroADireita>
                     <h2>Moves</h2>
+                    <div>
                     {poke.data.moves.map((pokemon, id) => {
-                        return id < 10 && <p key={id}>{pokemon.move.name}</p>
+                        return id < 10 && <p key={id}>{pokemon.move.name[0].toUpperCase() + pokemon.move.name.substring(1)}</p>
                     })}
+                    </div>
                     </QuadroADireita>
                     </UltimoQuadro>
                     </QuadroGrandeBranco>
@@ -141,7 +145,6 @@ const PokemonCard = ({id, name, type, image, adicionaPokemon, removePokemon, pok
                     <PokeballDetails src={PokebalImage} alt="pokeball" />
                 </PokemonDetalhesCard>
         }
-        
     }
     return (
         renderizaTela()
