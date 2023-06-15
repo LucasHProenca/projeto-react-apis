@@ -5,7 +5,7 @@ background-color: #5E5E5E;
 min-height: 100vh;
 width: 100%;
 display: flex;
-flex-direction: column;
+flex-direction: row;
 position: absolute;
 margin-top:12vh;
 
@@ -23,4 +23,10 @@ font-weight: 700;
 font-size: 4.8rem;
 line-height: 7.2rem;
 color: #FFFFFF;
+`
+
+export const ContainerPokemon = styled.section`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap
 `

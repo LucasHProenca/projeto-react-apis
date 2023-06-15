@@ -1,5 +1,6 @@
 import Router from './Router/Router';
 import { createGlobalStyle } from 'styled-components';
+import { ChakraProvider } from '@chakra-ui/react';
 
 const GlobalStyle = createGlobalStyle`
 html{
@@ -29,8 +30,10 @@ code {
 function App() {
   return (
     <>
+    <ChakraProvider>
     <GlobalStyle />
     <Router/>
+    </ChakraProvider>
     </>
   )
 }

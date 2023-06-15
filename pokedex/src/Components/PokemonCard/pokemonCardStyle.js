@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
+
 export const PokemonCardContainer = styled.div`
  padding: 1.6rem;
    width: 44rem;
-   background-color: #729F92;
+   height: 25vh;
+   background-color: ${({color}) => color};
    border-radius: 1.2rem;
    display: flex;
    position: relative;
@@ -33,6 +35,7 @@ export const PokemonDetail = styled.p`
   line-height: 2.4rem;
   text-decoration-line: underline;
   margin: 0 0 0.8rem 1rem;
+  cursor: pointer;
 `
 export const PokemonName = styled.h1`
 font-size: 3.2rem;
@@ -53,6 +56,8 @@ max-width: 10rem;
 export const TypesContainer = styled.div`
 margin-bottom: 5.2rem;
   margin-left: 0.8rem;
+  display:flex;
+  flex-direction:row;
 `
 
 export const Pokeball = styled.img`
@@ -73,6 +78,8 @@ font-family: 'Poppins';
   right: 3.5rem;
   color: #000;
   font-weight: 400;
+  background-color:white ;
+  z-index: 1;
   `
 
 
@@ -85,11 +92,11 @@ right: 0;
 z-index: 2;
 `
 
-export const PokemonDetalhesCard = styled.section`
+export const PokemonDetalhesCard = styled.div`
 width: 90%;
 height: 80vh;
 padding: 1.6rem;
-   background-color: #729F92;
+background-color: ${({color}) => color};
    border-radius: 1.2rem;
    display: flex;
    position: relative;
@@ -113,6 +120,11 @@ width:100%;
 background-color: white;
 color: black;
 border-radius: 0.8rem;
+
+img{
+  height: 100%;
+  width: 100%;
+}
 `
 
 export const QuadroGrandeBranco = styled.article`
@@ -127,16 +139,42 @@ export const QuadroADireita = styled.article`
 height:70%;
 width:70%;
 background-color: white;
+display: flex;
+flex-direction:column;
+justify-content: space-between;
+align-items:center;
 color: black;
 border-radius: 0.8rem;
+
+h2{
+  display: flex;
+  justify-content:center;
+  align-items:flex-start;
+}
+
+p{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+  border: 0.2rem dashed rbga(0,0,0, 0.2);
+  border-radius: 0.8rem;
+}
 `
 
 export const BaseStats = styled.article`
 height:100%;
 width:25%;
 background-color: white;
-color: black;
 border-radius: 0.8rem;
+display:flex;
+flex-direction:column;
+align-items:left;
+padding-left: 2rem;
+
+h2{
+  color:black;
+}
 `
 export const UltimoQuadro = styled.article`
 display: flex;
@@ -164,6 +202,50 @@ export const ContainerDeTipos = styled.div`
 display: flex;
 flex-direction:row;
 margin-left: 0.8rem;
+`
+
+export const PokemonNosDetalhes = styled.img`
+width: 20%;
+height: 20%;
+position: absolute;
+top: -6rem;
+right: 0;
+z-index: 2;
+`
+
+export const StatusDoPokemon = styled.section`
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items:flex-start;
+height: 50%;
+
+div{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+}
+`
+
+export const NomeDoStatus = styled.p`
+display:flex;
+justify-content: end;
+color:black;
+width: 50%;
+`
+
+export const ValorNumericoStatus = styled.p`
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color:black;
+`
+
+export const BarrasDePoder = styled.div`
+width: 100%;
+height: 1.3rem;
 `
 
 
