@@ -3,13 +3,18 @@ import { goToPokemonList } from "../../Router/Coordinator";
 import { goToPokedex } from "../../Router/Coordinator";
 import Logo from "./midia/Logo.png"
 import { HeaderContainer, Arrow } from "./headerStyle";
+import { useContext } from "react";
+import { globalContext } from "../../GlobalState/GlobalStateContext";
 
 
 
-const Header = ({ pokedex, adicionaPokemon, removePokemon, pokemonList }) => {
+const Header = () => {
     const navigate = useNavigate();
     let parametros = useLocation()
-    
+
+    const context = useContext(globalContext)
+    const {pokedex, adicionaPokemon, removePokemon, pokemonList} = context
+
     const nome = parametros.pathname.split("/")[2]
 
     const verificaPokemon = pokedex.find((pokemon) =>
@@ -21,7 +26,6 @@ const Header = ({ pokedex, adicionaPokemon, removePokemon, pokemonList }) => {
     )
 
     const result = () => {
-        
         if (verificaPokemon) {
             return<button onClick={() => {
                 removePokemon(verificaPokemon)

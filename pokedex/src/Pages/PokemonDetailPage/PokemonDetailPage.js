@@ -1,9 +1,13 @@
 import { useLocation, useParams } from "react-router-dom";
-import React from "react";
+import React, { useContext } from "react";
 import { PokemonDetailsPageEstilizacao, Detalhes } from "./pokemonDetailPageStyle";
 import PokemonCard from "../../Components/PokemonCard/PokemonCard";
+import { globalContext } from "../../GlobalState/GlobalStateContext";
 
-const PokemonDetailPage = ({pokemonList, pokedex}) => {
+const PokemonDetailPage = () => {
+
+  const context = useContext(globalContext)
+  const {pokemonList, pokedex} = context
     
     let pathParams = useParams();
     console.log(pathParams);

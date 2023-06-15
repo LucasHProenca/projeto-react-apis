@@ -17,7 +17,6 @@ export const PokemonCardContainer = styled.div`
 
 
 export const PokemonId = styled.p`
-width: 3rem;
   height: 1.9rem;
   font-size: 1.7rem;
   text-align: left;
@@ -141,29 +140,45 @@ width:70%;
 background-color: white;
 display: flex;
 flex-direction:column;
-justify-content: space-between;
-align-items:center;
+align-items:flex-start;
+justify-content:flex-start;
 color: black;
 border-radius: 0.8rem;
+gap: 1rem;
+padding: 1rem;
 
 h2{
   display: flex;
+  flex-direction: row;
   justify-content:center;
   align-items:flex-start;
+  font-size: 3rem;
+  margin-left: 1rem;
+}
+
+div{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
 }
 
 p{
   display: flex;
+  background-color: #ECECEC
   flex-direction: column;
   align-items:center;
   justify-content:center;
-  border: 0.2rem dashed rbga(0,0,0, 0.2);
+  border: 0.1rem dashed rgba(0,0,0, 0.14);
   border-radius: 0.8rem;
+  margin: 1rem;
+  font-size: 2rem;
+  font-family: "Montserrat"
+  line-height: 1.7rem;
+  
 }
 `
 
 export const BaseStats = styled.article`
-height:100%;
 width:25%;
 background-color: white;
 border-radius: 0.8rem;
@@ -173,7 +188,11 @@ align-items:left;
 padding-left: 2rem;
 
 h2{
+  display: flex;
+  flex-direction:row;
+  justify-content: flex-start;
   color:black;
+  font-size: 3rem;
 }
 `
 export const UltimoQuadro = styled.article`
@@ -223,29 +242,37 @@ height: 50%;
 div{
   display: flex;
   flex-direction: row;
+  align-items: center;
   width: 90%;
 }
 `
 
 export const NomeDoStatus = styled.p`
 display:flex;
-justify-content: end;
+flex-direction:row;
+justify-content: flex-start;
 color:black;
 width: 50%;
+font-size: 2rem;
 `
 
 export const ValorNumericoStatus = styled.p`
-width: 100%;
+margin-left:1rem;
 display: flex;
-flex-direction: column;
+flex-direction: row;
 justify-content: center;
 align-items: center;
 color:black;
+font-size: 2rem;
 `
 
 export const BarrasDePoder = styled.div`
 width: 100%;
 height: 1.3rem;
+display: flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 `
 
 
