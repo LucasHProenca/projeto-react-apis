@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const PokemonDetailsPageEstilizacao = styled.main`
 background-color: #5E5E5E;
-min-height: 120vh;
+min-height: 130vh;
 width: 100%;
 display: flex;
 flex-direction: column;
@@ -21,4 +21,9 @@ font-weight: 700;
 font-size: 4.8rem;
 line-height: 7.2rem;
 color: #FFFFFF;
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+font-size: 2.5rem;
+margin-left: 5vw;
+}
 `

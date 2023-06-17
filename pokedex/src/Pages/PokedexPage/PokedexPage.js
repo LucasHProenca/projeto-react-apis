@@ -12,7 +12,7 @@ const PokedexPage = () => {
 
   return (
     <PokedexPageEstilizacao>
-      <MeusPokemons>Meus Pokemons</MeusPokemons>
+      <MeusPokemons>Meus Pokémons</MeusPokemons>
       <ContainerPokemon>
         {pokedex.sort((a, b) => {
           return a.data.id - b.data.id

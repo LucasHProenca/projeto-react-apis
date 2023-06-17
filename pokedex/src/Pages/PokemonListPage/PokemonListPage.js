@@ -10,7 +10,7 @@ const PokemonListPage = () => {
 
     return(
         <PokemonListEstilizacao>
-          <TodosOsPokemons>Todos os Pokemons</TodosOsPokemons>
+          <TodosOsPokemons>Todos os Pokémons</TodosOsPokemons>
           <ContainerPokemon>
           {pokemonList
           .sort((a,b) => {
