@@ -48,7 +48,24 @@ span{
     color: #1A1A1A;
     margin-left: 5%;
     cursor: pointer;
-    
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+button{
+    font-size: 1rem;
+    width: 30%;
+    margin-right: 0;
+}
+
+div{
+    width: 40%;
+}
+
+span{
+    font-size: 1rem;
+    display:flex;
+    flex-direction:row;
+}
 }
 `
 

@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { Progress } from "@chakra-ui/react"
 import {
     PokemonCardContainer,
+    InformacoesDoPokemon,
     PokemonId,
     PokemonName,
     TypesContainer,
@@ -14,12 +15,12 @@ import {
     InformacoesPokemon,
     PokeballDetails,
     ContainerDeTipos,
-    QuadrosBrancos,
-    QuadrosAEsquerda,
-    QuadroGrandeBranco,
+    ContainerFrontEBack,
+    ImagemFrontEBack,
+    ContainerInformacoesDetails,
     BaseStats,
-    QuadroADireita,
-    UltimoQuadro,
+    Moves,
+    BasicInfoEMoves,
     StatusDoPokemon,
     NomeDoStatus,
     ValorNumericoStatus,
@@ -37,10 +38,29 @@ const PokemonCard = ({id, name, type, image, adicionaPokemon, removePokemon, pok
     const navigate = useNavigate()
     let parametros = useLocation()
 
+    const barraDeProgresso = (color) => {
+        if(color <= 20) {
+            return "red"
+        }else if(color > 20 && color <= 50 ){
+            return "orange"
+        }else if(color > 50 && color <= 80){
+            return "yellow"
+        }else if(color > 80 && color <= 100){
+            return "blue"
+        }else if(color > 100 && color <= 120){
+            return "teal"
+        }else if(color > 120 && color <= 160){
+            return "green"
+        }
+    }
+    console.log(barraDeProgresso())
+
+    let valores = 0
+
     const renderizaTela = () => {
         if(parametros.pathname === "/" ) {
                 return <PokemonCardContainer color = {getColors(poke.data.types[0].type.name)}>
-                    <div>
+                    <InformacoesDoPokemon>
                         <PokemonId>#{id.toString().length === 1? `0${id}` : `${id}`}</PokemonId>
                         <PokemonName>{name[0].toUpperCase() + name.substring(1)}</PokemonName>
                         <TypesContainer>
@@ -54,7 +74,7 @@ const PokemonCard = ({id, name, type, image, adicionaPokemon, removePokemon, pok
                         <PokemonDetail onClick={() => {
                             goToDetails(navigate, name)
                         }}>Detalhes</PokemonDetail>
-                    </div>
+                    </InformacoesDoPokemon>
                     <div>
                         <Pokemon src={image} />
                         <Button onClick = {() => {
@@ -66,7 +86,7 @@ const PokemonCard = ({id, name, type, image, adicionaPokemon, removePokemon, pok
                 </PokemonCardContainer>
         }else if(parametros.pathname === "/pokedex/" ) {
                 return <PokemonCardContainer color = {getColors(poke.data.types[0].type.name)}>
-                    <div>
+                    <InformacoesDoPokemon>
                         <PokemonId>#{id.toString().length === 1? `0${id}` : `${id}`}</PokemonId>
                         <PokemonName>{name[0].toUpperCase() + name.substring(1)}</PokemonName>
                         <TypesContainer>
@@ -80,30 +100,30 @@ const PokemonCard = ({id, name, type, image, adicionaPokemon, removePokemon, pok
                         <PokemonDetail onClick={() => {
                             goToDetails(navigate, name)
                         }}>Detalhes</PokemonDetail>
-                    </div>
+                    </InformacoesDoPokemon>
                     <div>
                         <Pokemon src={image} />
-                        <Button onClick={() => removePokemon(poke)}>Excluir!</Button>
-                    
+                        <Button onClick={() => removePokemon(poke)}>Excluir!</Button>     
                     <Pokeball src={PokebalImage} alt="pokeball" />
                     </div>
                 </PokemonCardContainer>
         }else if (parametros.pathname.includes("/pokemon-detail/")) {
                 return <PokemonDetalhesCard color = {getColors(poke.data.types[0].type.name)} >
-                    <QuadroGrandeBranco>
-                    <QuadrosBrancos>
-                        <QuadrosAEsquerda >
+                    <ContainerInformacoesDetails>
+                    <ContainerFrontEBack>
+                        <ImagemFrontEBack >
                             <img src={poke.data.sprites.front_default}/>
-                        </QuadrosAEsquerda>
-                        <QuadrosAEsquerda>
+                        </ImagemFrontEBack>
+                        <ImagemFrontEBack>
                         <img src={poke.data.sprites.back_default}/>    
-                        </QuadrosAEsquerda>
-                    </QuadrosBrancos>
+                        </ImagemFrontEBack>
+                    </ContainerFrontEBack>
                     <BaseStats>
                     <h2>Base Stats</h2>
                     <StatusDoPokemon>
                         {poke.data.stats.map((pokemon) => {
-                            console.log(pokemon.base_stat)
+                            valores += pokemon.base_stat
+                            console.log(valores)
                             return<div>
                                 <NomeDoStatus key = {pokemon.id}>
                                     {pokemon.stat.name[0].toUpperCase() + pokemon.stat.name.substring(1)}
@@ -112,13 +132,14 @@ const PokemonCard = ({id, name, type, image, adicionaPokemon, removePokemon, pok
                                     {pokemon.base_stat}
                                 </ValorNumericoStatus>
                                 <BarrasDePoder>
-                                    <Progress size={"lg"} max={150} value={pokemon.base_stat }></Progress>
+                                    <Progress style={{border: "0.1rem solid black", borderRadius: "0.3rem"}} bgColor={"gray"} colorScheme={barraDeProgresso(pokemon.base_stat)} size={"lg"} max={200} value={pokemon.base_stat } ></Progress>
                                 </BarrasDePoder>
                             </div>
                         })}
+                        <h1>Total:{valores}</h1>
                     </StatusDoPokemon>
-                    </BaseStats>
-                    <UltimoQuadro>
+                    </BaseStats>   
+                    <BasicInfoEMoves>
                     <InformacoesPokemon>
                         <PokemonId>#{id.toString().length === 1? `0${id}` : `${id}`}</PokemonId>
                         <PokemonName>{name[0].toUpperCase() + name.substring(1)}</PokemonName>
@@ -131,16 +152,16 @@ const PokemonCard = ({id, name, type, image, adicionaPokemon, removePokemon, pok
                             })}
                         </ContainerDeTipos>
                     </InformacoesPokemon>
-                    <QuadroADireita>
+                    <Moves>
                     <h2>Moves</h2>
                     <div>
                     {poke.data.moves.map((pokemon, id) => {
-                        return id < 10 && <p key={id}>{pokemon.move.name[0].toUpperCase() + pokemon.move.name.substring(1)}</p>
+                        return id < 7 && <p key={id}>{pokemon.move.name[0].toUpperCase() + pokemon.move.name.substring(1)}</p>
                     })}
                     </div>
-                    </QuadroADireita>
-                    </UltimoQuadro>
-                    </QuadroGrandeBranco>
+                    </Moves>
+                    </BasicInfoEMoves>
+                    </ContainerInformacoesDetails>
                         <Pokemon src={image} />
                     <PokeballDetails src={PokebalImage} alt="pokeball" />
                 </PokemonDetalhesCard>

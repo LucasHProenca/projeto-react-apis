@@ -3,25 +3,98 @@ import styled from "styled-components";
 
 export const PokemonCardContainer = styled.div`
  padding: 1.6rem;
-   width: 44rem;
-   height: 25vh;
-   background-color: ${({color}) => color};
+   width: 28vw;
+   height: 22vh;
+   background-color: ${({ color }) => color};
    border-radius: 1.2rem;
    display: flex;
    position: relative;
-   margin: 5rem;
+   margin: 3rem;
    color: #ffffff;
-   top: 10rem;
+
+   @media screen and (min-device-width : 1440px) and (max-device-width: 1570px) {
+    height: 28vh;
+}
+   
+@media screen and (min-device-width : 1201px) and (max-device-width : 1440px) {
+width: 35vw;
+height: 28vh;
+margin: 3rem;
+}
+
+@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+width: 43vw;
+height: 28vh;
+margin: 3rem;
+}
+
+@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
+width: 40vw;
+height: 30vh;
+margin: 2rem;
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+width: 43vw;
+height: 30vh;
+margin: 2rem;
+}
+
+@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
+width: 90vw;
+height: 30vh;
+margin: 3rem;
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+width: 90vw;
+height: 33vh;
+margin: 5vw;
+}
+
+`
+export const InformacoesDoPokemon = styled.div`
+display:flex;
+flex-direction:column;
 `
 
-
-
 export const PokemonId = styled.p`
-  height: 1.9rem;
-  font-size: 1.7rem;
+  height: 2.5rem;
+  font-size: 2rem;
   text-align: left;
   font-weight: 560;
   margin: 1rem 0 0 1rem;
+
+  @media screen and (min-device-width : 1441px) and (max-device-width : 1570px) {
+    height: 1.9rem;
+    font-size: 1.7rem;
+}
+
+@media screen and (min-device-width : 1201px) and (max-device-width : 1440px) {
+  height: 1.9rem;
+    font-size: 1.7rem;
+}
+
+@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+  height: 1.9rem;
+    font-size: 1.7rem;
+}
+
+@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
+height: 1.9rem;
+font-size: 1.7rem;
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+height:1.9rem;
+font-size: 1.7rem;
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+height:1.5rem;
+font-size:1.5rem;
+}
+
 `
 
 export const PokemonDetail = styled.p`
@@ -35,34 +108,129 @@ export const PokemonDetail = styled.p`
   text-decoration-line: underline;
   margin: 0 0 0.8rem 1rem;
   cursor: pointer;
+
+  @media screen and (min-device-width : 1441px) and (max-device-width : 1570px) {
+    margin: 0 0 0.8rem 1rem;
+}
+
+@media screen and (min-device-width : 1201px) and (max-device-width : 1440px) {
+margin: 1.5rem 0 0.8rem 1rem;
+}
+
+@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+  margin: 1rem 0 0.8rem 1rem;
+}
+
+@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
+margin: 0.5rem 0 0.8rem 1rem;
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+margin: 1rem 0 0.8rem 1rem;
+}
+
+@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
+margin: 1.3rem 0 0.8rem 1rem;
+}
+
+
 `
 export const PokemonName = styled.h1`
-font-size: 3.2rem;
+font-size: 2.5rem;
   text-align: left;
   margin-bottom: 1rem;
   font-size: 'Inter';
   font-weight: 800;
   line-height: 3.4rem;
   margin-left: 1rem;
+
+  @media screen and (min-device-width : 1441px) and (max-device-width : 1570px) {
+    font-size: 2rem;
+}
+
+@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+font-size:2rem;
+}
+
+@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
+font-size:2rem;
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+font-size: 2rem;
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+font-size: 1.6rem;
+}
 `
 
 export const PokemonType = styled.img`
-max-width: 10rem;
-  height: 3.2rem;
+  height: 3rem;
   margin-right: 0.8rem;
+  width:100%;
+
+  @media screen and (min-device-width : 1441px) and (max-device-width: 1570px) {
+    height:2.5rem; 
+}
+
+@media screen and (min-device-width : 1201px) and (max-device-width : 1440px) {
+height:2.9rem;
+width:70%;
+}
+
+@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+height:2.3rem;
+width:70%;
+}
+
+@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
+height:2.2rem;
+width: 70%;
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+height:1.8rem;
+width: 70%;
+}
+@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
+height: 2.5rem;
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+height: 2.3rem;
+width: 80%;
+}
 `
 
 export const TypesContainer = styled.div`
 margin-bottom: 5.2rem;
   margin-left: 0.8rem;
+  width:10rem;
   display:flex;
   flex-direction:row;
+
 `
 
 export const Pokeball = styled.img`
  position: absolute;
   top: 0;
   right: 0;
+
+  @media screen and (min-device-width : 801px) and (max-device-width : 900px) {
+width: 18rem;
+height: 18rem;
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+width: 18rem;
+height: 18rem;
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+width: 15rem;
+height: 15rem;
+}
 `
 
 export const Button = styled.button`
@@ -73,15 +241,36 @@ font-family: 'Poppins';
   height: 3.8rem;
   border-radius: 0.8rem;
   position: absolute;
-  bottom: 2.5rem;
+  bottom: 1.5rem;
   right: 3.5rem;
   color: #000;
   font-weight: 400;
   background-color:white ;
   z-index: 1;
+  
+  @media screen and (min-device-width : 1441px) and (max-device-width: 1570px) {
+    bottom: 2rem
+}
+
+@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
+width: 10rem;
+bottom: 3.5rem;
+right: 3rem;
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+width:10rem;
+bottom: 3.5rem;
+right: 3rem;
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+width: 10rem;
+bottom: 1rem;
+right: 2rem;
+}
+  
   `
-
-
 export const Pokemon = styled.img`
 width: 19.3rem;
 height: 19.3rem;
@@ -89,13 +278,31 @@ position: absolute;
 top: -6rem;
 right: 0;
 z-index: 2;
+
+@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
+width: 13rem;
+height: 13rem;
+top: -4rem;
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+width: 13rem;
+height: 13rem;
+top: -4rem;
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+width: 11rem;
+height: 11rem;
+top: -3rem;
+}
 `
 
 export const PokemonDetalhesCard = styled.div`
 width: 90%;
 height: 80vh;
 padding: 1.6rem;
-background-color: ${({color}) => color};
+background-color: ${({ color }) => color};
    border-radius: 1.2rem;
    display: flex;
    position: relative;
@@ -103,17 +310,36 @@ background-color: ${({color}) => color};
    color: #ffffff;
    top: 10rem;
 
+   @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    width: 90vw;
+height: 110vh;
+margin: 0;
+margin-left:5vw;
+padding: 1.6rem;
+   color: #ffffff;
+}
+
 `
 
-export const QuadrosBrancos = styled.article`
+export const ContainerFrontEBack = styled.div`
 display: flex;
 flex-direction: column;
 height: 100%;
 width: 20%;
 gap: 2rem;
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+flex-direction: row;
+width: 100%;
+height:15%;
+margin-top: 10rem;
+position: absolute;
+top: 66.5%;
+left: 0;
+}
 `
 
-export const QuadrosAEsquerda = styled.article`
+export const ImagemFrontEBack = styled.div`
 height:100%;
 width:100%;
 background-color: white;
@@ -124,17 +350,25 @@ img{
   height: 100%;
   width: 100%;
 }
+
 `
 
-export const QuadroGrandeBranco = styled.article`
+export const ContainerInformacoesDetails = styled.div`
 display:flex;
 flex-direction:row;
 width:100%;
 height: 100%;
 gap: 2rem;
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+width: 100%;
+height: 100%;
+display:flex
+flex-direction:column;
+}
 `
 
-export const QuadroADireita = styled.article`
+export const Moves = styled.div`
 height:70%;
 width:70%;
 background-color: white;
@@ -176,6 +410,19 @@ p{
   line-height: 1.7rem;
   
 }
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+width: 100%;
+height: 30%;
+
+h2{
+  font-size: 1.6rem;
+}
+
+p{
+  font-size:1.2rem;
+}
+}
 `
 
 export const BaseStats = styled.article`
@@ -194,27 +441,56 @@ h2{
   color:black;
   font-size: 3rem;
 }
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+width: 100%;
+height: 35%;
+margin-top: 3%;
+position: absolute;
+top:43%;
+left:0;
+
+h2{
+  font-size: 1.6rem;
+}
+}
+
 `
-export const UltimoQuadro = styled.article`
+export const BasicInfoEMoves = styled.div`
 display: flex;
 flex-direction: column;
 width: 40%;
 height:100%;
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+width: 100%;
+height:85%;
+position: absolute;
+top:0;
+left:0;
+}
 `
 
 export const InformacoesPokemon = styled.div`
 width: 40%;
-height:30%;
+height:20%;
 display: flex;
 flex-direction: column;
+
+
 `
 
 export const PokeballDetails = styled.img`
 position: absolute;
   top: 0;
   right:0;
-  width:60%;
-  height: 90vh;
+  width: 50%;
+  height: 100%;
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  width: 14rem;
+height: 13rem;
+}
 `
 
 export const ContainerDeTipos = styled.div`
@@ -238,12 +514,28 @@ flex-direction: column;
 justify-content: space-around;
 align-items:flex-start;
 height: 50%;
+width: 90%;
 
 div{
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 90%;
+  width: 100%;
+  border-bottom: 0.1rem solid rgba(0,0,0, 0.14);
+}
+
+h1{
+  color:black;
+  font-size: 1rem;
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+width: 100%;
+height: 100%;
+
+h1{
+  font-size: 1.6rem;
+}
 }
 `
 
@@ -253,7 +545,11 @@ flex-direction:row;
 justify-content: flex-start;
 color:black;
 width: 50%;
-font-size: 2rem;
+font-size: 1.6rem;
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+width: 100%;
+}
 `
 
 export const ValorNumericoStatus = styled.p`
@@ -263,16 +559,18 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 color:black;
-font-size: 2rem;
+font-size: 1.6rem;
 `
 
 export const BarrasDePoder = styled.div`
 width: 100%;
-height: 1.3rem;
 display: flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
+margin-left:1rem;
 `
+
+
 
 

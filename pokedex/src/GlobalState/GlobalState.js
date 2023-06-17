@@ -15,7 +15,7 @@ export const GlobalState = ({children}) => {
 
     const getPokemons = () => {
         let endpoints = [];
-        for (let i = 1; i < 151; i++) {
+        for (let i = 1; i < 152; i++) {
             endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
         }
         axios.all(endpoints.map((endpoint) => axios.get(endpoint)))
@@ -29,7 +29,6 @@ export const GlobalState = ({children}) => {
         setPokedex([...pokedex, poke])
         const newPokemonList = pokemonList.filter((pokemon) => {
             if (pokemon.data.id === poke.data.id) {
-                console.log("oiee to aqui")
                 return pokemon.data.id !== poke.data.id
             } else {
                 return poke
