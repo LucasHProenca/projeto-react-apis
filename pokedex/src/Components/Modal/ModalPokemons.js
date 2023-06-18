@@ -23,7 +23,7 @@ import { ContainerModal, Titulo} from './modalPokemonsStyle'
             <ModalCloseButton/>
             <Flex
             style={{borderRadius: "0.8rem"}}
-            h={"25rem"}
+            h={"30vh"}
             flexDirection={"column"}
             justifyContent={"center"}
             alignItems={"center"}

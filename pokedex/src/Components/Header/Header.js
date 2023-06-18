@@ -51,7 +51,7 @@ const Header = () => {
                 <button onClick={() => {
                     goToPokedex(navigate)
                 }}>
-                    Pokedex
+                    Pokédex
                 </button>
             </HeaderContainer>
         } else if (parametros.pathname === "/pokedex/") {
@@ -60,7 +60,7 @@ const Header = () => {
                     <Arrow>‹</Arrow>
                     <span onClick={() => {
                         goToPokemonList(navigate)
-                    }}>Todos os Pokemons</span>
+                    }}>Todos os Pokémons</span>
                 </div>
                 <img src={Logo} alt="logo" />
             </HeaderContainer>
@@ -70,7 +70,7 @@ const Header = () => {
                         <Arrow>‹</Arrow>
                         <span onClick={() => {
                             goToPokemonList(navigate)
-                        }}>Todos os Pokemons</span>
+                        }}>Todos os Pokémons</span>
                     </div>
                     <img src={Logo} alt="logo" />
                     {result()}
