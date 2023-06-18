@@ -30,13 +30,13 @@ margin: 3rem;
 
 @media screen and (min-device-width : 801px) and (max-device-width : 900px) {
 width: 40vw;
-height: 30vh;
+height: 28vh;
 margin: 2rem;
 }
 
 @media screen and (min-device-width : 701px) and (max-device-width : 800px) {
 width: 43vw;
-height: 30vh;
+height: 28vh;
 margin: 2rem;
 }
 
@@ -48,7 +48,7 @@ margin: 3rem;
 
 @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
 width: 90vw;
-height: 33vh;
+height: 25vh;
 margin: 5vw;
 }
 
@@ -132,8 +132,6 @@ margin: 1rem 0 0.8rem 1rem;
 @media screen and (min-device-width : 481px) and (max-device-width : 700px) {
 margin: 1.3rem 0 0.8rem 1rem;
 }
-
-
 `
 export const PokemonName = styled.h1`
 font-size: 2.5rem;
@@ -198,7 +196,7 @@ height: 2.5rem;
 }
 
 @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
-height: 2.3rem;
+height: 2.1rem;
 width: 80%;
 }
 `
@@ -217,7 +215,12 @@ export const Pokeball = styled.img`
   top: 0;
   right: 0;
 
-  @media screen and (min-device-width : 801px) and (max-device-width : 900px) {
+@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+height: 18rem;
+width: 18rem;
+}
+
+@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
 width: 18rem;
 height: 18rem;
 }
@@ -248,19 +251,25 @@ font-family: 'Poppins';
   background-color:white ;
   z-index: 1;
   
-  @media screen and (min-device-width : 1441px) and (max-device-width: 1570px) {
-    bottom: 2rem
+@media screen and (min-device-width : 1441px) and (max-device-width: 1570px) {
+bottom: 2rem
+}
+
+@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+width: 10rem;
+bottom: 1.5rem;
+right: 3rem;
 }
 
 @media screen and (min-device-width : 801px) and (max-device-width : 900px) {
 width: 10rem;
-bottom: 3.5rem;
+bottom: 2rem;
 right: 3rem;
 }
 
 @media screen and (min-device-width : 701px) and (max-device-width : 800px) {
 width:10rem;
-bottom: 3.5rem;
+bottom: 2rem;
 right: 3rem;
 }
 
@@ -278,6 +287,12 @@ position: absolute;
 top: -6rem;
 right: 0;
 z-index: 2;
+
+@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+width: 13rem;
+height: 13rem;
+top: -4rem;
+}
 
 @media screen and (min-device-width : 801px) and (max-device-width : 900px) {
 width: 13rem;
@@ -303,20 +318,56 @@ width: 90%;
 height: 80vh;
 padding: 1.6rem;
 background-color: ${({ color }) => color};
-   border-radius: 1.2rem;
-   display: flex;
-   position: relative;
-   margin: 5rem;
-   color: #ffffff;
-   top: 10rem;
+border-radius: 1.2rem;
+display: flex;
+position: relative;
+margin: 5rem;
+color: #ffffff;
+top: 10rem;
 
-   @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    width: 90vw;
+@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+height: 105vh;
+width: 90vw;
+margin: 0;
+margin-left: 5vw;
+padding: 1.6rem;
+color: #ffffff
+}
+
+@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
+height: 85vh;
+width: 90vw;
+margin: 0;
+margin-left: 5vw;
+padding: 1.6rem;
+color: #ffffff
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+height: 85vh;
+width: 90vw;
+margin: 0;
+margin-left: 5vw;
+padding: 1.6rem;
+color: #ffffff
+}
+
+@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
+height: 85vh;
+width: 90vw;
+margin: 0;
+margin-left: 5vw;
+padding: 1.6rem;
+color: #ffffff
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+width: 90vw;
 height: 110vh;
 margin: 0;
 margin-left:5vw;
 padding: 1.6rem;
-   color: #ffffff;
+color: #ffffff;
 }
 
 `
@@ -328,13 +379,53 @@ height: 100%;
 width: 20%;
 gap: 2rem;
 
+@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+flex-direction:row;
+width: 100%;
+height: 20%;
+margin-top: 10rem;
+position: absolute;
+top: 65%;
+left: 0;
+}
+
+@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
+flex-direction:row;
+width: 100%;
+height: 15%;
+margin-top: 10rem;
+position: absolute;
+top: 65%;
+left: 0;
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+flex-direction:row;
+width: 100%;
+height: 15%;
+margin-top: 10rem;
+position: absolute;
+top: 68%;
+left: 0;
+}
+
+@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
+flex-direction:row;
+width: 100%;
+height: 15%;
+margin-top: 10rem;
+position: absolute;
+top: 68%;
+left: 0;
+}
+
 @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
 flex-direction: row;
 width: 100%;
 height:15%;
 margin-top: 10rem;
 position: absolute;
-top: 66.5%;
+top: 68%;
 left: 0;
 }
 `
@@ -345,12 +436,29 @@ width:100%;
 background-color: white;
 color: black;
 border-radius: 0.8rem;
+display: flex;
+justify-content: center;
+align-items: center;
 
 img{
   height: 100%;
   width: 100%;
 }
 
+@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+  img{
+    height: 75%;
+    width: 75%;
+  }
+}
+
+@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
+
+  img{
+    height: 75%;
+    width: 75%;
+  }
+}
 `
 
 export const ContainerInformacoesDetails = styled.div`
@@ -360,16 +468,44 @@ width:100%;
 height: 100%;
 gap: 2rem;
 
+@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+height: 100%;
+width: 100%;
+display:flex;
+flex-direction: column;
+}
+
+@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
+height: 100%;
+width: 100%;
+display:flex;
+flex-direction: column;
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+height: 100%;
+width: 100%;
+display:flex;
+flex-direction: column;
+}
+
+@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
+height: 100%;
+width: 100%;
+display:flex;
+flex-direction: column;
+}
+
 @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
 width: 100%;
 height: 100%;
-display:flex
+display:flex;
 flex-direction:column;
 }
 `
 
 export const Moves = styled.div`
-height:70%;
+height:90%;
 width:70%;
 background-color: white;
 display: flex;
@@ -408,7 +544,66 @@ p{
   font-size: 2rem;
   font-family: "Montserrat"
   line-height: 1.7rem;
-  
+}
+
+@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+height: 20%;
+width: 100%;
+
+{
+  h2{
+    font-size: 2rem;
+  }
+
+  p{
+    font-size: 1.6rem;
+  }
+}
+}
+
+@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
+height: 25%;
+width: 100%;
+
+{
+  h2{
+    font-size: 2rem;
+  }
+
+  p{
+    font-size: 1.6rem;
+  }
+}
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+height: 30%;
+width: 100%;
+
+{
+  h2{
+    font-size: 2rem;
+  }
+
+  p{
+    font-size: 1.6rem;
+  }
+}
+}
+
+@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
+height: 30%;
+width: 100%;
+
+{
+  h2{
+    font-size: 2rem;
+  }
+
+  p{
+    font-size: 1.6rem;
+  }
+}
 }
 
 @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -442,6 +637,58 @@ h2{
   font-size: 3rem;
 }
 
+@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+width: 100%;
+height: 35%;
+margin-top: 3%;
+position: absolute;
+top:35%;
+left:0;
+
+h2{
+  font-size: 1.6rem;
+}
+}
+
+@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
+width: 100%;
+height: 35%;
+margin-top: 3%;
+position: absolute;
+top:38%;
+left:0;
+
+h2{
+  font-size: 1.6rem;
+}
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+width: 100%;
+height: 35%;
+margin-top: 3%;
+position: absolute;
+top:43%;
+left:0;
+
+h2{
+  font-size: 1.6rem;
+}
+}
+
+@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
+width: 100%;
+height: 35%;
+margin-top: 3%;
+position: absolute;
+top:43%;
+left:0;
+
+h2{
+  font-size: 1.6rem;
+}
+}
+
 @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
 width: 100%;
 height: 35%;
@@ -462,6 +709,38 @@ flex-direction: column;
 width: 40%;
 height:100%;
 
+@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+width: 100%;
+height:87.5%;
+position: absolute;
+top:0;
+left:0;
+}
+
+@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
+width: 100%;
+height:87.5%;
+position: absolute;
+top:0;
+left:0;
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+width: 100%;
+height:87.5%;
+position: absolute;
+top:0;
+left:0;
+}
+
+@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
+width: 100%;
+height:85%;
+position: absolute;
+top:0;
+left:0;
+}
+
 @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
 width: 100%;
 height:85%;
@@ -477,18 +756,42 @@ height:20%;
 display: flex;
 flex-direction: column;
 
-
 `
 
 export const PokeballDetails = styled.img`
 position: absolute;
-  top: 0;
+top: 0;
+right:3.5rem;
+width: 60%;
+height: 100%;
+
+@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+right:0;
+width: 14rem;
+height: 14rem;
+}
+
+@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
   right:0;
-  width: 50%;
-  height: 100%;
+width: 14rem;
+height: 14rem;
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+  right:0;
+width: 14rem;
+height:13rem;
+}
+
+@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
+  right:0;
+width: 14rem;
+height:13rem;
+}
 
 @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
-  width: 14rem;
+  right:0;
+width: 14rem;
 height: 13rem;
 }
 `
@@ -497,6 +800,7 @@ export const ContainerDeTipos = styled.div`
 display: flex;
 flex-direction:row;
 margin-left: 0.8rem;
+width: 50%;
 `
 
 export const PokemonNosDetalhes = styled.img`
@@ -526,16 +830,36 @@ div{
 
 h1{
   color:black;
-  font-size: 1rem;
+  font-size: 1.3rem;
+}
+
+@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+width: 100%;
+height: 100%;
+
+}
+
+@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
+width: 100%;
+height: 100%;
+
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+width: 100%;
+height: 100%;
+
+}
+
+@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
+width: 100%;
+height: 100%;
+
 }
 
 @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
 width: 100%;
 height: 100%;
-
-h1{
-  font-size: 1.6rem;
-}
 }
 `
 
@@ -544,8 +868,24 @@ display:flex;
 flex-direction:row;
 justify-content: flex-start;
 color:black;
-width: 50%;
-font-size: 1.6rem;
+width: 100%;
+font-size: 1.2rem;
+
+@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+width: 100%;
+}
+
+@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
+width: 100%;
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+width: 100%;
+}
+
+@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
+width: 100%;
+}
 
 @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
 width: 100%;
@@ -569,6 +909,45 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 margin-left:1rem;
+`
+
+export const PokePicDetails = styled.img`
+width: 19.3rem;
+height: 19.3rem;
+position: absolute;
+top: -6rem;
+right: 0;
+z-index: 2;
+
+@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+width: 11rem;
+height: 11rem;
+top: -4rem;
+}
+
+@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
+width: 11rem;
+height: 11rem;
+top: -4rem;
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+width: 11rem;
+height: 11rem;
+top: -4rem;
+}
+
+@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
+width: 11rem;
+height: 11rem;
+top: -4rem;
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+width: 11rem;
+height: 11rem;
+top: -3rem;
+}
 `
 
 

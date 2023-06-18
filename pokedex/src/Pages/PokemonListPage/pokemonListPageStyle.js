@@ -11,9 +11,7 @@ margin-top:12vh;
 `
 
 export const TodosOsPokemons = styled.p`
-width: 42rem;
-height: 7.2rem;
-margin-left: 4rem;
+margin-left: 7.5rem;
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 700;
@@ -21,6 +19,25 @@ font-size: 4.8rem;
 line-height: 7.2rem;
 color: #FFFFFF;
 
+@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+font-size: 2.5rem;
+margin-left: 5vw;
+}
+
+@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
+font-size: 2.5rem;
+margin-left: 7.5vw;
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+font-size: 2.5rem;
+margin-left: 5vw;
+}
+
+@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
+font-size: 2.5rem;
+margin-left: 5vw;
+}
 @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
 font-size: 2.5rem;
 margin-left: 5vw;

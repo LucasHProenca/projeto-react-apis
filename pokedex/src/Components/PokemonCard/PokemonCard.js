@@ -25,6 +25,7 @@ import {
     NomeDoStatus,
     ValorNumericoStatus,
     BarrasDePoder,
+    PokePicDetails,
     PokemonNosDetalhes
 } from "./pokemonCardStyle"
 import PokebalImage from "../../Midia/pokeball.png"
@@ -162,7 +163,7 @@ const PokemonCard = ({id, name, type, image, adicionaPokemon, removePokemon, pok
                     </Moves>
                     </BasicInfoEMoves>
                     </ContainerInformacoesDetails>
-                        <Pokemon src={image} />
+                        <PokePicDetails src={image} />
                     <PokeballDetails src={PokebalImage} alt="pokeball" />
                 </PokemonDetalhesCard>
         }
