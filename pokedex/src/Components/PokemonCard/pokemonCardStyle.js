@@ -48,7 +48,7 @@ margin: 3rem;
 
 @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
 width: 90vw;
-height: 25vh;
+height: 26.5vh;
 margin: 5vw;
 }
 
@@ -113,6 +113,10 @@ margin: 1rem 0 0.8rem 1rem;
 
 @media screen and (min-device-width : 481px) and (max-device-width : 700px) {
 margin: 1.3rem 0 0.8rem 1rem;
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+margin: 1rem 0 0.8rem 1rem;
 }
 `
 export const PokemonName = styled.h1`
