@@ -64,28 +64,10 @@ export const PokemonId = styled.p`
   text-align: left;
   font-weight: 560;
   margin: 1rem 0 0 1rem;
+  font-family: Inter;
 
-  @media screen and (min-device-width : 1441px) and (max-device-width : 1570px) {
-    height: 1.9rem;
-    font-size: 1.7rem;
-}
 
-@media screen and (min-device-width : 1201px) and (max-device-width : 1440px) {
-  height: 1.9rem;
-    font-size: 1.7rem;
-}
-
-@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
-  height: 1.9rem;
-    font-size: 1.7rem;
-}
-
-@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
-height: 1.9rem;
-font-size: 1.7rem;
-}
-
-@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+@media screen and (min-device-width : 701px) and (max-device-width : 1570px) {
 height:1.9rem;
 font-size: 1.7rem;
 }
@@ -114,7 +96,7 @@ export const PokemonDetail = styled.p`
 }
 
 @media screen and (min-device-width : 1201px) and (max-device-width : 1440px) {
-margin: 1.5rem 0 0.8rem 1rem;
+margin: 0.5rem 0 0.8rem 1rem;
 }
 
 @media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
@@ -141,20 +123,10 @@ font-size: 2.5rem;
   font-weight: 800;
   line-height: 3.4rem;
   margin-left: 1rem;
+  font-family: Inter;
+  cursor: pointer;
 
-  @media screen and (min-device-width : 1441px) and (max-device-width : 1570px) {
-    font-size: 2rem;
-}
-
-@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
-font-size:2rem;
-}
-
-@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
-font-size:2rem;
-}
-
-@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+@media screen and (min-device-width : 701px) and (max-device-width : 1570px) {
 font-size: 2rem;
 }
 
@@ -215,17 +187,7 @@ export const Pokeball = styled.img`
   top: 0;
   right: 0;
 
-@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
-height: 18rem;
-width: 18rem;
-}
-
-@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
-width: 18rem;
-height: 18rem;
-}
-
-@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+@media screen and (min-device-width : 701px) and (max-device-width : 1200px) {
 width: 18rem;
 height: 18rem;
 }
@@ -261,13 +223,7 @@ bottom: 1.5rem;
 right: 3rem;
 }
 
-@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
-width: 10rem;
-bottom: 2rem;
-right: 3rem;
-}
-
-@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
+@media screen and (min-device-width : 701px) and (max-device-width : 900px) {
 width:10rem;
 bottom: 2rem;
 right: 3rem;
@@ -334,25 +290,7 @@ padding: 1.6rem;
 color: #ffffff
 }
 
-@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
-height: 85vh;
-width: 90vw;
-margin: 0;
-margin-left: 5vw;
-padding: 1.6rem;
-color: #ffffff
-}
-
-@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
-height: 85vh;
-width: 90vw;
-margin: 0;
-margin-left: 5vw;
-padding: 1.6rem;
-color: #ffffff
-}
-
-@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
+@media screen and (min-device-width : 481px) and (max-device-width : 900px) {
 height: 85vh;
 width: 90vw;
 margin: 0;
@@ -399,17 +337,7 @@ top: 65%;
 left: 0;
 }
 
-@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
-flex-direction:row;
-width: 100%;
-height: 15%;
-margin-top: 10rem;
-position: absolute;
-top: 68%;
-left: 0;
-}
-
-@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
+@media screen and (min-device-width : 481px) and (max-device-width : 800px) {
 flex-direction:row;
 width: 100%;
 height: 15%;
@@ -425,6 +353,7 @@ width: 100%;
 height:15%;
 margin-top: 10rem;
 position: absolute;
+padding-top: 5%;
 top: 68%;
 left: 0;
 }
@@ -445,20 +374,6 @@ img{
   width: 100%;
 }
 
-@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
-  img{
-    height: 75%;
-    width: 75%;
-  }
-}
-
-@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
-
-  img{
-    height: 75%;
-    width: 75%;
-  }
-}
 `
 
 export const ContainerInformacoesDetails = styled.div`
@@ -468,35 +383,7 @@ width:100%;
 height: 100%;
 gap: 2rem;
 
-@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
-height: 100%;
-width: 100%;
-display:flex;
-flex-direction: column;
-}
-
-@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
-height: 100%;
-width: 100%;
-display:flex;
-flex-direction: column;
-}
-
-@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
-height: 100%;
-width: 100%;
-display:flex;
-flex-direction: column;
-}
-
-@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
-height: 100%;
-width: 100%;
-display:flex;
-flex-direction: column;
-}
-
-@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media screen and (min-device-width : 320px) and (max-device-width : 1200px) {
 width: 100%;
 height: 100%;
 display:flex;
@@ -516,6 +403,7 @@ color: black;
 border-radius: 0.8rem;
 gap: 1rem;
 padding: 1rem;
+font-family: Inter;
 
 h2{
   display: flex;
@@ -576,22 +464,7 @@ width: 100%;
 }
 }
 
-@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
-height: 30%;
-width: 100%;
-
-{
-  h2{
-    font-size: 2rem;
-  }
-
-  p{
-    font-size: 1.6rem;
-  }
-}
-}
-
-@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
+@media screen and (min-device-width : 481px) and (max-device-width : 800px) {
 height: 30%;
 width: 100%;
 
@@ -620,6 +493,16 @@ p{
 }
 `
 
+export const TabelaDeInfo = styled.article`
+width:25%;
+background-color: white;
+border-radius: 0.8rem;
+display:flex;
+flex-direction:column;
+align-items:left;
+padding-left: 2rem;
+`
+
 export const BaseStats = styled.article`
 width:25%;
 background-color: white;
@@ -628,6 +511,7 @@ display:flex;
 flex-direction:column;
 align-items:left;
 padding-left: 2rem;
+font-family:Inter;
 
 h2{
   display: flex;
@@ -663,20 +547,7 @@ h2{
 }
 }
 
-@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
-width: 100%;
-height: 35%;
-margin-top: 3%;
-position: absolute;
-top:43%;
-left:0;
-
-h2{
-  font-size: 1.6rem;
-}
-}
-
-@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
+@media screen and (min-device-width : 481px) and (max-device-width : 800px) {
 width: 100%;
 height: 35%;
 margin-top: 3%;
@@ -692,7 +563,7 @@ h2{
 @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
 width: 100%;
 height: 35%;
-margin-top: 3%;
+margin-top: 5%;
 position: absolute;
 top:43%;
 left:0;
@@ -709,7 +580,7 @@ flex-direction: column;
 width: 40%;
 height:100%;
 
-@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+@media screen and (min-device-width : 701px) and (max-device-width : 1200px) {
 width: 100%;
 height:87.5%;
 position: absolute;
@@ -717,31 +588,7 @@ top:0;
 left:0;
 }
 
-@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
-width: 100%;
-height:87.5%;
-position: absolute;
-top:0;
-left:0;
-}
-
-@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
-width: 100%;
-height:87.5%;
-position: absolute;
-top:0;
-left:0;
-}
-
-@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
-width: 100%;
-height:85%;
-position: absolute;
-top:0;
-left:0;
-}
-
-@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media screen and (min-device-width : 320px) and (max-device-width : 700px) {
 width: 100%;
 height:85%;
 position: absolute;
@@ -765,31 +612,13 @@ right:3.5rem;
 width: 60%;
 height: 100%;
 
-@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+@media screen and (min-device-width : 801px) and (max-device-width : 1200px) {
 right:0;
 width: 14rem;
 height: 14rem;
 }
 
-@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
-  right:0;
-width: 14rem;
-height: 14rem;
-}
-
-@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
-  right:0;
-width: 14rem;
-height:13rem;
-}
-
-@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
-  right:0;
-width: 14rem;
-height:13rem;
-}
-
-@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media screen and (min-device-width : 320px) and (max-device-width : 800px) {
   right:0;
 width: 14rem;
 height: 13rem;
@@ -833,31 +662,7 @@ h1{
   font-size: 1.3rem;
 }
 
-@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
-width: 100%;
-height: 100%;
-
-}
-
-@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
-width: 100%;
-height: 100%;
-
-}
-
-@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
-width: 100%;
-height: 100%;
-
-}
-
-@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
-width: 100%;
-height: 100%;
-
-}
-
-@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media screen and (min-device-width : 320px) and (max-device-width : 1200px) {
 width: 100%;
 height: 100%;
 }
@@ -871,25 +676,6 @@ color:black;
 width: 100%;
 font-size: 1.2rem;
 
-@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
-width: 100%;
-}
-
-@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
-width: 100%;
-}
-
-@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
-width: 100%;
-}
-
-@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
-width: 100%;
-}
-
-@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
-width: 100%;
-}
 `
 
 export const ValorNumericoStatus = styled.p`
@@ -919,25 +705,7 @@ top: -6rem;
 right: 0;
 z-index: 2;
 
-@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
-width: 11rem;
-height: 11rem;
-top: -4rem;
-}
-
-@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
-width: 11rem;
-height: 11rem;
-top: -4rem;
-}
-
-@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
-width: 11rem;
-height: 11rem;
-top: -4rem;
-}
-
-@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
+@media screen and (min-device-width : 481px) and (max-device-width : 1200px) {
 width: 11rem;
 height: 11rem;
 top: -4rem;
@@ -949,6 +717,229 @@ height: 11rem;
 top: -3rem;
 }
 `
+
+export const PesoEAlturaContainer = styled.article`
+width:25%;
+background-color: white;
+border-radius: 0.8rem;
+display:flex;
+flex-direction:column;
+align-items:left;
+padding-left: 2rem;
+font-family: Inter;
+
+h2{
+  display: flex;
+  flex-direction:row;
+  justify-content: flex-start;
+  color:black;
+  font-size: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 1200px) {
+width: 100%;
+height: 15%;
+margin-top: 3%;
+position: absolute;
+justify-content: center;
+top:52%;
+left:0;
+
+h2{
+  font-size: 1.6rem;
+}
+}
+
+@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
+width: 100%;
+height: 15%;
+margin-top: 3%;
+position: absolute;
+top:62%;
+left:0;
+
+h2{
+  font-size: 1.6rem;
+}
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+width: 100%;
+height: 15%;
+margin-top: 5%;
+position: absolute;
+top:60%;
+left:0;
+
+h2{
+  font-size: 1.6rem;
+}
+}
+`
+
+export const AtaquesEspeciais = styled.div`
+height:90%;
+width:70%;
+background-color: white;
+display: flex;
+flex-direction:column;
+align-items:flex-start;
+justify-content:flex-start;
+color: black;
+border-radius: 0.8rem;
+gap: 1rem;
+padding: 1rem;
+font-family: Inter;
+
+h2{
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items:flex-start;
+  font-size: 2.5rem;
+  margin-left: 1rem;
+}
+
+div{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+}
+
+p{
+  display: flex;
+  background-color: #ECECEC
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+  border: 0.1rem dashed rgba(0,0,0, 0.14);
+  border-radius: 0.8rem;
+  margin: 1rem;
+  font-size: 1.6rem;
+  font-family: "Montserrat"
+  line-height: 1.7rem;
+}
+
+@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+height: 40%;
+width: 100%;
+
+{
+  h2{
+    font-size: 2rem;
+  }
+
+  p{
+    font-size: 1.8rem;
+  }
+}
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 900px) {
+height: 40%;
+width: 100%;
+
+{
+  h2{
+    font-size: 2rem;
+  }
+
+  p{
+    font-size: 1.6rem;
+  }
+}
+}
+
+@media screen and (min-device-width : 481px) and (max-device-width : 700px) {
+height: 50%;
+width: 100%;
+
+{
+  h2{
+    font-size: 2rem;
+  }
+
+  p{
+    font-size: 1.3rem;
+  }
+}
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+width: 100%;
+height: 50%;
+
+h2{
+  font-size: 1.6rem;
+}
+
+p{
+  font-size:1.2rem;
+}
+}
+`
+
+export const ContainerShiny = styled.div`
+display: flex;
+flex-direction: column;
+height: 100%;
+width: 20%;
+gap: 2rem;
+
+img{
+  height: 50%;
+}
+
+@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
+flex-direction:row;
+justify-content: center;
+width: 100%;
+height: 20%;
+margin-top: 10rem;
+position: absolute;
+top: 65%;
+left: 0;
+
+img{
+  height: 100%;
+}
+}
+
+@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
+flex-direction:row;
+justify-content: center;
+width: 100%;
+height: 15%;
+margin-top: 10rem;
+position: absolute;
+top: 65%;
+left: 0;
+
+img{
+  height: 100%;
+}
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 800px) {
+flex-direction: row;
+justify-content: center;
+width: 100%;
+height:15%;
+margin-top: 10rem;
+position: absolute;
+padding-top: 5%;
+top: 68%;
+left: 0;
+
+img{
+  height: 100%;
+}
+}
+
+`
+
+
 
 
 

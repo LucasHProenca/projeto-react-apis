@@ -1,18 +1,34 @@
 import React, { useContext } from "react"
-import { PokemonListEstilizacao, TodosOsPokemons, ContainerPokemon } from "./pokemonListPageStyle"
+import { PokemonListEstilizacao, TodosOsPokemons, ContainerPokemon, ContainerFiltro } from "./pokemonListPageStyle"
 import PokemonCard from "../../Components/PokemonCard/PokemonCard"
 import { globalContext } from "../../GlobalState/GlobalStateContext"
 
 const PokemonListPage = () => {
 
   const context = useContext(globalContext)
-  const {adicionaPokemon, pokemonList} = context
+  const {adicionaPokemon, pokemonList, searchFilter, setSearchFilter} = context
+
+const onChangeSearchFilter = (e) => {
+  setSearchFilter(e.target.value)
+}
 
     return(
         <PokemonListEstilizacao>
+          <ContainerFiltro>
           <TodosOsPokemons>Todos os Pokémons</TodosOsPokemons>
+          <label htmlFor="buscaNome">
+                <input id="buscaNome" placeholder="🔍" value={searchFilter} onChange={onChangeSearchFilter}></input>
+            </label>
+            </ContainerFiltro>
           <ContainerPokemon>
           {pokemonList
+          .filter((poke) => {
+            if(searchFilter && poke.data.name.toLowerCase().includes(searchFilter.toLowerCase())){
+              return poke;
+            }else if(!searchFilter){
+              return poke
+            }
+          })
           .sort((a,b) => {
             return a.data.id - b.data.id
           })

@@ -7,6 +7,7 @@ export const GlobalState = ({children}) => {
     const [pokemonList, setPokemonList] = useState([])
     const [pokemonModalIsOpen, setPokemonModalIsOpen] = useState(false)
     const [action, setAction] = useState(0)
+    const [searchFilter, setSearchFilter] = useState("")
 
 
     useEffect(() => {
@@ -27,6 +28,7 @@ export const GlobalState = ({children}) => {
         setPokemonModalIsOpen(true)
         setAction(0)
         setPokedex([...pokedex, poke])
+        setSearchFilter("")
         const newPokemonList = pokemonList.filter((pokemon) => {
             if (pokemon.data.id === poke.data.id) {
                 return pokemon.data.id !== poke.data.id
@@ -40,6 +42,7 @@ export const GlobalState = ({children}) => {
     const removePokemon = (poke) => {
         setPokemonModalIsOpen(true)
         setAction(1)
+        setSearchFilter("")
         const newPokemonToPokedex = pokedex.find((thing) => thing.data.id === poke.data.id)
         if (newPokemonToPokedex) {
             const newPokedex = pokedex.filter((pokemon) => {
@@ -50,15 +53,21 @@ export const GlobalState = ({children}) => {
         }
     }
 
+    
     const context = {
         pokemonList,
         pokedex,
+        setPokemonList,
+        setPokedex,
         adicionaPokemon,
         removePokemon,
         pokemonModalIsOpen,
         setPokemonModalIsOpen,
         action,
-        setAction
+        setAction,
+        getPokemons,
+        searchFilter,
+        setSearchFilter
     }
 
     return (

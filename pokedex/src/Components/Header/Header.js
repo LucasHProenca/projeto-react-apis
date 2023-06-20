@@ -13,7 +13,7 @@ const Header = () => {
     let parametros = useLocation()
 
     const context = useContext(globalContext)
-    const {pokedex, adicionaPokemon, removePokemon, pokemonList} = context
+    const { pokedex, adicionaPokemon, removePokemon, pokemonList } = context
 
     const nome = parametros.pathname.split("/")[2]
 
@@ -22,28 +22,29 @@ const Header = () => {
     )
 
     const verificaLista = pokemonList.find((pokemon) =>
-    pokemon.data.name === nome
+        pokemon.data.name === nome
     )
 
     const result = () => {
         if (verificaPokemon) {
-            return<button onClick={() => {
+            return <button style={{ backgroundColor: "#FF6262" }} onClick={() => {
                 removePokemon(verificaPokemon)
                 goToPokedex(navigate)
-                }}>
+            }}>
                 Excluir da Pokedex
             </button>
-        } else if(verificaLista) {
-            return<button onClick={() => {
+        } else if (verificaLista) {
+            return <button onClick={() => {
                 adicionaPokemon(verificaLista)
                 goToPokedex(navigate)
-                }}>
+            }}>
                 Adicionar na Pokedex
             </button>
         }
     }
 
-    console.log(parametros.pathname)
+    // console.log(parametros.pathname)
+
     const renderizaTela = () => {
         if (parametros.pathname === "/") {
             return <HeaderContainer>
@@ -65,16 +66,27 @@ const Header = () => {
                 <img src={Logo} alt="logo" />
             </HeaderContainer>
         } else if (parametros.pathname.includes("/pokemon-detail/")) {
-                return <HeaderContainer>
-                    <div>
-                        <Arrow>‹</Arrow>
-                        <span onClick={() => {
-                            goToPokemonList(navigate)
-                        }}>Todos os Pokémons</span>
-                    </div>
-                    <img src={Logo} alt="logo" />
-                    {result()}
-                </HeaderContainer>
+            return <HeaderContainer>
+                <div>
+                    <Arrow>‹</Arrow>
+                    <span onClick={() => {
+                        goToPokemonList(navigate)
+                    }}>Todos os Pokémons</span>
+                </div>
+                <img src={Logo} alt="logo" />
+                {result()}
+            </HeaderContainer>
+        } else if (parametros.pathname.includes("/pokemon-profile/")) {
+            return <HeaderContainer>
+                <div>
+                    <Arrow>‹</Arrow>
+                    <span onClick={() => {
+                        goToPokemonList(navigate)
+                    }}>Todos os Pokémons</span>
+                </div>
+                <img src={Logo} alt="logo" />
+                {result()}
+            </HeaderContainer>
         }
     }
     return (

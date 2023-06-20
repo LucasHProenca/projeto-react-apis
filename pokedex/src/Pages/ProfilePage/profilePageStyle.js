@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-export const PokemonDetailsPageEstilizacao = styled.main`
+
+export const PokemonProfilePageEstilizacao = styled.main`
 background-color: #5E5E5E;
 min-height: 100vh;
 width: 100%;
@@ -18,7 +19,7 @@ min-height: 130vh;
 }
 `
 
-export const Detalhes = styled.p`
+export const Profile = styled.p`
 position: absolute;
 left: 5rem;
 font-family: 'Poppins';

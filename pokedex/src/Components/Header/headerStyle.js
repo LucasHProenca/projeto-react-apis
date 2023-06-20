@@ -8,7 +8,7 @@ height: 15vh;
 position: absolute;
 
 img{
-    width: 22%;
+    width: 25%;
     height: 70%;
     position: absolute;
     left: 39%;
