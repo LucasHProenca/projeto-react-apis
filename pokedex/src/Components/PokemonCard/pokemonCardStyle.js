@@ -728,6 +728,7 @@ background-color: white;
 border-radius: 0.8rem;
 display:flex;
 flex-direction:column;
+justify-content: start;
 align-items:left;
 padding-left: 2rem;
 font-family: Inter;
@@ -741,13 +742,27 @@ h2{
   padding-bottom: 2rem;
 }
 
-@media screen and (min-device-width : 701px) and (max-device-width : 1200px) {
+@media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
 width: 100%;
-height: 15%;
+height: 35%;
 margin-top: 3%;
 position: absolute;
-justify-content: center;
-top:52%;
+justify-content: flex-start;
+top:35%;
+left:0;
+
+h2{
+  font-size: 1.6rem;
+}
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 900px) {
+width: 100%;
+height: 40%;
+margin-top: 3%;
+position: absolute;
+justify-content: flex-start;
+top:35%;
 left:0;
 
 h2{
@@ -757,10 +772,10 @@ h2{
 
 @media screen and (min-device-width : 481px) and (max-device-width : 700px) {
 width: 100%;
-height: 15%;
+height: 40%;
 margin-top: 3%;
 position: absolute;
-top:62%;
+top:35%;
 left:0;
 
 h2{
@@ -770,10 +785,10 @@ h2{
 
 @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
 width: 100%;
-height: 15%;
+height: 43%;
 margin-top: 5%;
 position: absolute;
-top:60%;
+top:35%;
 left:0;
 
 h2{
@@ -782,9 +797,50 @@ h2{
 }
 `
 
+export const InformacoesBasicas = styled.div`
+height:50%;
+width:60%;
+background-color: white;
+display: flex;
+flex-direction:column;
+align-items:flex-start;
+justify-content:flex-start;
+color: black;
+border-radius: 0.8rem;
+gap: 1rem;
+padding: 1rem;
+font-family: Inter;
+
+h2{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items:flex-start;
+  font-size: 2.5rem;
+  margin-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+div{
+  width: 100%;
+  
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 1200px) {
+height: 20%;
+width: 100%;
+
+  h2{
+    font-size: 2rem;
+  
+}
+}
+
+`
+
 export const AtaquesEspeciais = styled.div`
 height:90%;
-width:70%;
+width:100%;
 background-color: white;
 display: flex;
 flex-direction:column;

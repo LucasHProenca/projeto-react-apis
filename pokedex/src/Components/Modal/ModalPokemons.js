@@ -35,13 +35,13 @@ import pokeballopening from "./midiaModal/pokeballopening.gif"
             <ContainerModal>
               <img src={pokeball}/>
                 <Titulo><strong>Gotcha!</strong></Titulo>
-                <p>O pokemon foi adicionado a sua Pokedex.</p>
+                <p>O pokémon foi adicionado a sua Pokédex.</p>
             </ContainerModal>   
             : 
             <ContainerModal>
               <PokebolaAbrindo src={pokeballopening}/>
                 <Titulo><strong>Oh, no!</strong></Titulo>
-                <p>O pokemon foi removido da sua Pokedex.</p>
+                <p>O pokémon foi removido da sua Pokédex.</p>
             </ContainerModal> 
             }
             </Flex>

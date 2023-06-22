@@ -40,7 +40,8 @@ import {
     PesoEAlturaContainer,
     AtaquesEspeciais,
     ContainerShiny,
-    PokemonNosDetalhes
+    PokemonNosDetalhes,
+    InformacoesBasicas
 } from "./pokemonCardStyle"
 import PokebalImage from "../../Midia/pokeball.png"
 import { goToDetails, goToProfilePage } from "../../Router/Coordinator"
@@ -179,7 +180,7 @@ const PokemonCard = ({ id, name, type, image, adicionaPokemon, removePokemon, po
                             <h2><strong>Moves</strong></h2>
                             <div>
                                 {poke.data.moves.map((pokemon, id) => {
-                                    return id < 7 && <p key={id}>{pokemon.move.name[0].toUpperCase() + pokemon.move.name.substring(1)}</p>
+                                    return id <= 7 && <p key={id}>{pokemon.move.name[0].toUpperCase() + pokemon.move.name.substring(1)}</p>
                                 })}
                             </div>
                         </Moves>
@@ -196,6 +197,30 @@ const PokemonCard = ({ id, name, type, image, adicionaPokemon, removePokemon, po
                         <img src={poke.data.sprites.versions["generation-v"]["black-white"].animated.back_shiny} />
                     </ContainerShiny>
                     <PesoEAlturaContainer>
+                    <AtaquesEspeciais>
+                            <h2><strong>Ataques Especiais</strong></h2>
+                            <div>
+                                {poke.data.moves.map((pokemon, id) => {
+                                    return id > 2 && id < 23 && <p key={id}>{pokemon.move.name[0].toUpperCase() + pokemon.move.name.substring(1)}</p>
+                                })}
+                            </div>
+                        </AtaquesEspeciais>
+                    </PesoEAlturaContainer>
+                    <BasicInfoEMoves>
+                        <InformacoesPokemon>
+                            <PokemonId>#{id.toString().length === 1 ? `0${id}` : `${id}`}</PokemonId>
+                            <PokemonName>{name[0].toUpperCase() + name.substring(1)}</PokemonName>
+                            <ContainerDeTipos>
+                                {type.map((type) => {
+                                    return <PokemonType
+                                        key={type.id}
+                                        src={getTypes(type.type.name)}
+                                    />
+                                })}
+                            </ContainerDeTipos>
+                        </InformacoesPokemon>
+                        <InformacoesBasicas>
+                        <div>
                         <h2><strong>Informações Básicas</strong></h2>
                         <TableContainer>
                             <Table variant='simple'>
@@ -213,28 +238,8 @@ const PokemonCard = ({ id, name, type, image, adicionaPokemon, removePokemon, po
                                 </Tbody>
                             </Table>
                         </TableContainer>
-                    </PesoEAlturaContainer>
-                    <BasicInfoEMoves>
-                        <InformacoesPokemon>
-                            <PokemonId>#{id.toString().length === 1 ? `0${id}` : `${id}`}</PokemonId>
-                            <PokemonName>{name[0].toUpperCase() + name.substring(1)}</PokemonName>
-                            <ContainerDeTipos>
-                                {type.map((type) => {
-                                    return <PokemonType
-                                        key={type.id}
-                                        src={getTypes(type.type.name)}
-                                    />
-                                })}
-                            </ContainerDeTipos>
-                        </InformacoesPokemon>
-                        <AtaquesEspeciais>
-                            <h2><strong>Ataques Especiais</strong></h2>
-                            <div>
-                                {poke.data.moves.map((pokemon, id) => {
-                                    return id > 7 && id < 30 && <p key={id}>{pokemon.move.name[0].toUpperCase() + pokemon.move.name.substring(1)}</p>
-                                })}
-                            </div>
-                        </AtaquesEspeciais>
+                        </div>
+                        </InformacoesBasicas>
                     </BasicInfoEMoves>
                 </ContainerInformacoesDetails>
                 <PokePicDetails src={poke.data.sprites.other.dream_world.front_default} />
