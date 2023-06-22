@@ -31,14 +31,14 @@ const Header = () => {
                 removePokemon(verificaPokemon)
                 goToPokedex(navigate)
             }}>
-                Excluir da Pokedex
+                Excluir da Pokédex
             </button>
         } else if (verificaLista) {
             return <button onClick={() => {
                 adicionaPokemon(verificaLista)
                 goToPokedex(navigate)
             }}>
-                Adicionar na Pokedex
+                Adicionar na Pokédex
             </button>
         }
     }
