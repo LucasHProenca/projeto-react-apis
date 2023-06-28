@@ -359,8 +359,15 @@ justify-content: center;
 align-items: center;
 
 img{
+  width: 50%;
   height: 100%;
-  width: 100%;
+}
+
+img{
+@media screen and (min-device-width : 1200px) {
+width: 100%;
+height: 100%;
+}
 }
 
 `

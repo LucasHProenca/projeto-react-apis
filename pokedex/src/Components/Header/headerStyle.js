@@ -16,7 +16,7 @@ img{
 
 button{
     height: 46%;
-    width: 20%;
+    width: 25%;
     margin-right: 3%;
     background-color: #33A4F5;
     color: #FFFFFF;
@@ -53,7 +53,7 @@ span{
 @media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
 button{
 font-size: 2rem;
-width: 30%;
+width: 25%;
 margin-right: 0;
 }
 
@@ -71,7 +71,7 @@ span{
 @media screen and (min-device-width : 801px) and (max-device-width : 900px) {
 button{
 font-size: 2rem;
-width: 30%;
+width: 25%;
 margin-right: 0;
 }
 
@@ -89,7 +89,7 @@ span{
 @media screen and (min-device-width : 701px) and (max-device-width : 800px) {
     button{
     font-size: 1.6rem;
-    width: 30%;
+    width: 25%;
     margin-right: 0;
 }
 
@@ -107,7 +107,7 @@ span{
 @media screen and (min-device-width : 481px) and (max-device-width : 700px) {
     button{
     font-size: 1.6rem;
-    width: 30%;
+    width: 25%;
     margin-right: 0;
 }
 
@@ -125,7 +125,7 @@ span{
 @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
 button{
     font-size: 1rem;
-    width: 30%;
+    width: 25%;
     margin-right: 0;
 }
 
