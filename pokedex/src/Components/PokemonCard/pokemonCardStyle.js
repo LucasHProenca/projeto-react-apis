@@ -88,36 +88,23 @@ export const PokemonDetail = styled.p`
   font-size: 1.6rem;
   line-height: 2.4rem;
   text-decoration-line: underline;
-  margin: 0 0 0.8rem 1rem;
+  position: absolute;
+  bottom: 2rem;
+  margin-left: 1.2rem;
   cursor: pointer;
 
-  @media screen and (min-device-width : 1441px) and (max-device-width : 1570px) {
-    margin: 0 0 0.8rem 1rem;
-}
-
-@media screen and (min-device-width : 1201px) and (max-device-width : 1440px) {
-margin: 0.5rem 0 0.8rem 1rem;
+  @media screen and (min-device-width : 1570px){
+  bottom: 1.5rem;
 }
 
 @media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
-  margin: 1rem 0 0.8rem 1rem;
-}
-
-@media screen and (min-device-width : 801px) and (max-device-width : 900px) {
-margin: 0.5rem 0 0.8rem 1rem;
-}
-
-@media screen and (min-device-width : 701px) and (max-device-width : 800px) {
-margin: 1rem 0 0.8rem 1rem;
+  bottom: 1.5rem;
 }
 
 @media screen and (min-device-width : 481px) and (max-device-width : 700px) {
-margin: 1.3rem 0 0.8rem 1rem;
+  bottom: 1.5rem;
 }
-
-@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
-margin: 0 0 0.8rem 1rem;
-}
+ 
 `
 export const PokemonName = styled.h1`
 font-size: 2.5rem;
@@ -178,9 +165,7 @@ width: 80%;
 `
 
 export const TypesContainer = styled.div`
-margin-bottom: 5.2rem;
   margin-left: 0.8rem;
-  width:10rem;
   display:flex;
   flex-direction:row;
 
@@ -218,7 +203,7 @@ font-family: 'Poppins';
   z-index: 1;
   
 @media screen and (min-device-width : 1441px) and (max-device-width: 1570px) {
-bottom: 2rem
+bottom: 2rem;
 }
 
 @media screen and (min-device-width : 901px) and (max-device-width : 1200px) {
@@ -235,7 +220,7 @@ right: 3rem;
 
 @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
 width: 10rem;
-bottom: 3rem;
+bottom: 2rem;
 right: 2rem;
 }
   
