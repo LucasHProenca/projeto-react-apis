@@ -104,6 +104,29 @@ Página Inicial
 
 ![PaginaInicial](https://github.com/LucasHProenca/projeto-react-apis/assets/106993403/55dc7d8d-479e-4073-b3ac-c96a5fb8fdca)
 
+Pokémon Capturado
+
+![PokemonCapturado](https://github.com/LucasHProenca/projeto-react-apis/assets/106993403/b1e4f64d-0034-4a5c-882a-9a8579112363)
+
+Pokédex
+
+![Pokedex](https://github.com/LucasHProenca/projeto-react-apis/assets/106993403/1587b8a5-2c9f-4e40-abdc-0170853bbb51)
+
+Pokémon Removido da Pokédex
+
+![Pokemon Removido](https://github.com/LucasHProenca/projeto-react-apis/assets/106993403/18353628-900a-4696-836d-365599bdf41a)
+
+Filtro
+
+![Filtro](https://github.com/LucasHProenca/projeto-react-apis/assets/106993403/46697e10-ad62-4476-aa50-404157981287)
+
+Página de Detalhes
+
+![DetalhesPoke](https://github.com/LucasHProenca/projeto-react-apis/assets/106993403/ef661af8-a8fd-4367-b328-2b2fc77a2f9c)
+
+Perfil
+
+![PerfilPoke](https://github.com/LucasHProenca/projeto-react-apis/assets/106993403/1421ab7e-d075-40c1-bc0c-d1da2d9265ba)
 
 
 Tecnologias utilizadas: React Hooks(useState, Effect, Location e Context), Styled-Components, Chakra-UI, API
