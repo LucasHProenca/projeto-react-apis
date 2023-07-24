@@ -128,8 +128,22 @@ Perfil
 
 ![PerfilPoke](https://github.com/LucasHProenca/projeto-react-apis/assets/106993403/1421ab7e-d075-40c1-bc0c-d1da2d9265ba)
 
+---
 
-Tecnologias utilizadas: React Hooks(useState, Effect, Location e Context), Styled-Components, Chakra-UI, API
+## 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+#### ([API](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)  +  [React](https://react.dev/))
+
+-   **[React Router](https://reactrouter.com/en/main)**
+-   **[React Context](https://legacy.reactjs.org/docs/context.html)**
+-   **[Styled-components](https://styled-components.com/)**
+-   **[Design Systems](https://storybook.js.org/tutorials/design-systems-for-developers/react/en/introduction/)**
+-   **[Axios](https://axios-http.com/ptbr/docs/intro)**
+-   **[Estado Global](https://coderpad.io/blog/development/global-state-management-react/)**
+
+---
 
 Link do Surge: https://pokedex-lucashp.surge.sh/
 
