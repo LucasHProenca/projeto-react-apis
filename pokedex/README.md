@@ -2,7 +2,25 @@
 <img src="https://github.com/LucasHProenca/projeto-react-apis/assets/106993403/a1e35e76-ae38-4ec1-9f8c-0044a92c9ef7" alt="" />
 </div>
 
+---
 
+<p align="center">
+ <a href="#-sobre-o-projeto">Sobre</a> •
+ <a href="#-funcionalidades">Funcionalidades</a> •
+ <a href="#-como-executar">Como executar</a> • 
+ <a href="#-tecnologias">Tecnologias</a> • 
+ <a href="#-autor">Autor</a> • 
+</p>
+
+## 💻 Sobre o projeto
+
+![pokeball](https://cdn.emojidex.com/emoji/seal/pokeball.png "pokeball") Pokédex - Essa API foi desenvolvida como um facilitador para cadastrar produtos e clientes para a loja Toy Star, que é um e-commerce personalizado de brinquedos da franquia Star Wars, com isso, oferecemos produtos em todas as faixas de preço e gosto, visando atender desde o pequeno fã até o colecionador fanático.
+Porém, não é restrita a apenas o uso da nossa loja, uma vez que é possível cadastrar seus próprios produtos e clientes, assim como organizar e cancelar pedidos de quaisquer seguimentos.
+
+Projeto desenvolvido durante o **Bootcamp Web Full-Stack** da [Labenu](https://www.labenu.com.br/curso-de-programacao-web-full-stack-integral).
+Esse bootcamp é uma experiência online é um programa com mais de 1000 horas de experiência prática em desenvolvimento Full-stack e projetos individuais.
+
+---
 
 A Pokédex foi desenvolvida com a finalidade de trazer de volta um pequeno gosto de infância, devido a isso, 
 temos disponíveis todos os 151 pokémons da região de Kanto para integrar a sua pokédex. Venha nos visitar e torne-se um mestre pokémon!
