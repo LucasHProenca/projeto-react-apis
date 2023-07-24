@@ -47,7 +47,7 @@ Esse bootcamp é uma experiência online é um programa com mais de 1000 horas d
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/).
 
 #### 🎲 Rodando o template
 
@@ -145,4 +145,14 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ---
 
+## 🦸 Autor
+
+ <img style="border-radius: 50%;"  src="https://github.com/LucasHProenca/Labecommerce-back-end/assets/106993403/9abf8ee7-9527-42f8-9151-04ccd3db2d97" width="100px;" alt="" />
+ <br />
+ <sub><b>Lucas Henrique Proença</b></sub>
+ <br />
+
+[![Linkedin Badge](https://img.shields.io/badge/-Lucas-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/lucas-proen%C3%A7a-512650106/)](https://www.linkedin.com/in/lucas-proen%C3%A7a-512650106/) 
+
+---
 
