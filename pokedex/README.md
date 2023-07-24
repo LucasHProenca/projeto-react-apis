@@ -9,7 +9,7 @@
  <a href="#-funcionalidades">Funcionalidades</a> •
  <a href="#-como-executar">Como executar</a> • 
  <a href="#-detalhes">Detalhes</a> • 
- <a href="#-paginas">Páginas</a> • 
+ <a href="#-páginas">Páginas</a> • 
  <a href="#-tecnologias">Tecnologias</a> • 
  <a href="#-autor">Autor</a> • 
 </p>
