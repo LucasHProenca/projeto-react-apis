@@ -94,6 +94,18 @@ Também foi adicionado um filtro a página inicial e a pokédex, onde é possív
 
 Pessoalmente falando, a prioridade para este trabalho foi em desenvolver corretamente a API, trazendo um layout limpo e adaptável e, fazer funções que não permitissem ao usuário ter o mesmo pokémon tanto na lista inicial quanto em sua pokédex, poís assim como nos jogos mais antigos, não havia uma razão para se capturar mais do que um do mesmo, sendo assim, eles eram considerados por mim e por muitos outros jogadores como sendo únicos, e duplica-los tirária um pouco desse sentimento.
 
+---
+
+## 📄 Páginas
+
+### Desktop 
+
+Página Inicial 
+
+![image](https://github.com/LucasHProenca/projeto-react-apis/assets/106993403/55dc7d8d-479e-4073-b3ac-c96a5fb8fdca)
+
+
+
 Tecnologias utilizadas: React Hooks(useState, Effect, Location e Context), Styled-Components, Chakra-UI, API
 
 Link do Surge: https://pokedex-lucashp.surge.sh/
