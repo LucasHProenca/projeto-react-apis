@@ -1,5 +1,6 @@
-<img align="center" margin="auto" src="https://data.pixiz.com/output/user/frame/preview/400x400/2/3/0/0/2200032_50ba6.jpg" alt="" />
-
+<div align="center">
+<img src="https://data.pixiz.com/output/user/frame/preview/400x400/2/3/0/0/2200032_50ba6.jpg" alt="" />
+</div>
 
 
 A Pokédex foi desenvolvida com a finalidade de trazer de volta um pequeno gosto de infância, devido a isso, 
