@@ -8,25 +8,76 @@
  <a href="#-sobre-o-projeto">Sobre</a> •
  <a href="#-funcionalidades">Funcionalidades</a> •
  <a href="#-como-executar">Como executar</a> • 
+ <a href="#-detalhes">Detalhes</a> • 
+ <a href="#-paginas">Páginas</a> • 
  <a href="#-tecnologias">Tecnologias</a> • 
  <a href="#-autor">Autor</a> • 
 </p>
 
 ## 💻 Sobre o projeto 
 
-![pokeball](https://cdn.emojidex.com/emoji/mdpi/pokeball.png "pokeball") Pokédex - Essa API foi desenvolvida como um facilitador para cadastrar produtos e clientes para a loja Toy Star, que é um e-commerce personalizado de brinquedos da franquia Star Wars, com isso, oferecemos produtos em todas as faixas de preço e gosto, visando atender desde o pequeno fã até o colecionador fanático.
-Porém, não é restrita a apenas o uso da nossa loja, uma vez que é possível cadastrar seus próprios produtos e clientes, assim como organizar e cancelar pedidos de quaisquer seguimentos.
+![pokeball](https://cdn.emojidex.com/emoji/mdpi/pokeball.png "pokeball") Pokédex - A Pokédex foi desenvolvida com a finalidade de trazer de volta um pequeno gosto de infância, devido a isso, 
+temos disponíveis todos os 151 pokémons da região de Kanto para integrar a sua pokédex. Venha nos visitar e torne-se um mestre pokémon!
+A parte inicial do projeto foi realizada pensando em telas maiores que 1570 pixels até um máximo de 1920 pixels.
+Tendo em vista atender ao máximo de dispositivos possíveis, também foram adicionadas diversas outras formatações, para telas intermediárias, entre 481 e 800 pixels de largura para tablets e entre 320 até 480 pixels de largura para celulares smartphones android.
 
 Projeto desenvolvido durante o **Bootcamp Web Full-Stack** da [Labenu](https://www.labenu.com.br/curso-de-programacao-web-full-stack-integral).
 Esse bootcamp é uma experiência online é um programa com mais de 1000 horas de experiência prática em desenvolvimento Full-stack e projetos individuais.
 
 ---
 
-A Pokédex foi desenvolvida com a finalidade de trazer de volta um pequeno gosto de infância, devido a isso, 
-temos disponíveis todos os 151 pokémons da região de Kanto para integrar a sua pokédex. Venha nos visitar e torne-se um mestre pokémon!
+## ⚙️ Funcionalidades
 
-A parte inicial do projeto foi realizada pensando em telas maiores que 1570 pixels até um máximo de 1920 pixels.
-Tendo em vista atender ao máximo de dispositivos possíveis, também foram adicionadas diversas outras formatações, para telas intermediárias, entre 481 e 800 pixels de largura para tablets e entre 320 até 480 pixels de largura para celulares smartphones android.
+  - [x] Acesso a todos os pokémons da região de kanto;
+  - [x] Navegação entre as páginas;
+  - [x] Possibilidade de adicionar pokémons a sua pokédex;
+  - [x] Possibilidade de excluir pokémons da sua pokédex;
+  - [x] Analise de atributos de cada pokémon;  
+  - [x] Principais ataques;
+  - [x] Informações básicas;
+  - [x] Ataques especiais;
+  - [x] Versão shiny(brilhante);
+  - [x] Filtro para busca de um pokémon especifico.
+
+---
+
+## 🚀 Como executar
+
+### Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+#### 🎲 Rodando o template
+
+```bash
+
+# Clone este repositório
+$ git clone link-do-repositório-git
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd projeto-react-apis
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd pokedex
+
+# Para abrir o vsCode
+$ code .
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação
+$ npm run start
+
+# O servidor inciará na porta:3000 
+
+```
+
+Todo o projeto foi desenvolvido através da [PokéAPI](https://pokeapi.co/).
+
+## 🔍 Detalhes 
 
 Este projeto conta com um código mais limpo e direto, uma vez que todas as modificações que ocorrem no layout do website com as trocas de tela são feitas considerando o caminho que o usuário se encontra no momento, por exemplo:
 Inicialmente o usuário se encontra na página inicial com 151 pokémons disponíveis para captura, contudo, ao capturar um deles, ou acessar a pokédex pelo botão localizado no cabeçalho, havéra uma mudança na rota do site, indicando para o código que alterações precisam ser feitas no layout, portanto, a lista de pokémons capturados é renderizada e ficará disponível para o usuário (caso ele tenha capturado algum pokémon), o card do mesmo sofre alterações mostrando no lugar da opção de capturar, onde temos a possibilidade de exclusão do mesmo, fazendo com que ele retorne a página inicial. 
@@ -42,8 +93,6 @@ Outros pontos importantes a serem ressaltados são: Primeiramente, ao capturar o
 Também foi adicionado um filtro a página inicial e a pokédex, onde é possível procurar pokémons de acordo com o nome, e assim que o mesmo é capturado ou excluído o campo de filtro é limpo, podendo o usuário iniciar uma nova busca.
 
 Pessoalmente falando, a prioridade para este trabalho foi em desenvolver corretamente a API, trazendo um layout limpo e adaptável e, fazer funções que não permitissem ao usuário ter o mesmo pokémon tanto na lista inicial quanto em sua pokédex, poís assim como nos jogos mais antigos, não havia uma razão para se capturar mais do que um do mesmo, sendo assim, eles eram considerados por mim e por muitos outros jogadores como sendo únicos, e duplica-los tirária um pouco desse sentimento.
-
-Todo o projeto foi desenvolvido através da PokéAPI disponível em: https://pokeapi.co/
 
 Tecnologias utilizadas: React Hooks(useState, Effect, Location e Context), Styled-Components, Chakra-UI, API
 
