@@ -1,3 +1,7 @@
+<img align="center" src="https://data.pixiz.com/output/user/frame/preview/400x400/2/3/0/0/2200032_50ba6.jpg" width="100%;" alt="" />
+
+
+
 A Pokédex foi desenvolvida com a finalidade de trazer de volta um pequeno gosto de infância, devido a isso, 
 temos disponíveis todos os 151 pokémons da região de Kanto para integrar a sua pokédex. Venha nos visitar e torne-se um mestre pokémon!
 
