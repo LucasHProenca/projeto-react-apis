@@ -77,6 +77,8 @@ $ npm run start
 
 Todo o projeto foi desenvolvido através da [PokéAPI](https://pokeapi.co/).
 
+---
+
 ## 🔍 Detalhes 
 
 Este projeto conta com um código mais limpo e direto, uma vez que todas as modificações que ocorrem no layout do website com as trocas de tela são feitas considerando o caminho que o usuário se encontra no momento, por exemplo:
