@@ -1,4 +1,4 @@
-<img text-align="center" src="https://data.pixiz.com/output/user/frame/preview/400x400/2/3/0/0/2200032_50ba6.jpg" alt="" />
+<img align="center" margin="auto" src="https://data.pixiz.com/output/user/frame/preview/400x400/2/3/0/0/2200032_50ba6.jpg" alt="" />
 
 
 
